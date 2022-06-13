@@ -1,0 +1,20 @@
+@mixin svg($name) {
+    mask: url(../images/svg/#{$name}.svg) no-repeat center / contain;
+    -webkit-mask: url(../images/svg/#{$name}.svg) no-repeat center / contain;
+}
+
+i.svg {
+    position: relative;
+    display: block;
+    background-color: $w;
+    width: 20px;
+    height: 20px;
+    flex: none;
+
+    &.navi-select{@include svg(navi-select);}
+    &.enter{@include svg(enter);}
+    &.arrow{@include svg(arrow);}
+    &.play{@include svg(play);}
+    &.step{@include svg(step);}
+    &.check{@include svg(check);}
+}

@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+npm-debug.*
+
+images/ny_alotha_finish.mp4

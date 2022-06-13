@@ -1,0 +1,169 @@
+.site {
+  footer {
+    background: rgba($footer, 0.9);
+    margin-top: 80px !important;
+
+    .flex {
+      position: relative;
+      display: flex;
+      padding: 43px 0 37px;
+      align-items: flex-start;
+
+      .lists {
+        position: relative;
+        display: flex;
+        flex: 1;
+        margin-right: auto;
+        padding-top: 5px;
+
+        ul {
+          position: relative;
+          display: block;
+          margin-right: auto;
+
+          & + ul {
+            margin-left: 20px;
+          }
+
+          li {
+            position: relative;
+            display: block;
+
+            & + li {
+              margin-top: 13px;
+            }
+
+            a {
+              position: relative;
+              display: inline-block;
+              color: $w4;
+              font-size: 14px;
+
+              @include s-min(x1100) {
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      img.logo {
+        position: relative;
+        display: block;
+        margin-left: 20px;
+        max-width: 212px;
+        height: auto;
+      }
+    }
+
+    .description {
+      position: relative;
+      display: flex;
+      padding-bottom: 22px;
+      width: 100%;
+
+      .text {
+        position: relative;
+        display: block;
+        flex: 1;
+        max-width: 900px;
+        color: $c10;
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: auto;
+
+        a {
+          color: $c10;
+
+          @include s-min(x1100) {
+            &:hover {
+              color: $w4;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        position: relative;
+        display: block;
+        color: $c10;
+        font-size: 16px;
+        min-width: 212px;
+        text-align: center;
+
+        a {
+          color: $c10;
+
+          @include s-min(x1100) {
+            &:hover {
+              color: $w4;
+            }
+          }
+        }
+      }
+    }
+
+    @include s-max(x900) {
+      .flex {
+        flex-direction: column-reverse;
+
+        img.logo {
+          margin: 0 auto 10px;
+        }
+
+        .lists {
+          flex-wrap: wrap;
+          flex: none;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+
+          ul {
+            width: 50%;
+            margin: 0 !important;
+            padding: 6px 10px;
+
+            li {
+              text-align: right;
+
+              & + li {
+                margin-top: 12px !important;
+              }
+            }
+
+            &:nth-child(even) {
+              li {
+                text-align: left;
+              }
+            }
+
+            @include s-max(x500) {
+              width: 100%;
+
+              li {
+                text-align: center !important;
+              }
+            }
+          }
+        }
+      }
+
+      .description {
+        flex-direction: column;
+
+        .text {
+          flex: none;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .copyright {
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,675 @@
+.site{
+	.navigation {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 16px;
+		left: 0;
+		background: rgba($menu, 0.3);
+		z-index: 100;
+	
+		.inner {
+			position: relative;
+			display: block;
+			width: calc(100% - 20px);
+			max-width: 1320px;
+			margin: 0 auto;
+		}
+	
+		.flex {
+			position: relative;
+			display: flex;
+			width: 100%;
+			height: 110px;
+			align-items: center;
+	
+			.navi-button {
+				position: relative;
+				display: none;
+				width: 36px;
+				height: 21px;
+				margin-right: auto;
+	
+				@include s-max(x1100) {
+					display: block;
+				}
+	
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 3px;
+					background: $c1;
+					top: 0;
+					left: 0;
+					@include transition(0.2s);
+					-webkit-transform: rotate(0deg) translate(0, 0);
+						-ms-transform: rotate(0deg) translate(0, 0);
+						transform: rotate(0deg) translate(0, 0);
+				}
+	
+				&:after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 3px;
+					background: $c1;
+					bottom: 0;
+					left: 0;
+					@include transition(0.2s);
+					-webkit-transform: rotate(0deg) translate(0, 0);
+						-ms-transform: rotate(0deg) translate(0, 0);
+						transform: rotate(0deg) translate(0, 0);
+				}
+	
+				span {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 3px;
+					background: $c1;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					@include transition(0.2s);
+				}
+	
+				&.toggle {
+					&:before {
+						-webkit-transform: rotate(45deg) translate(1px, -50%);
+							-ms-transform: rotate(45deg) translate(1px, -50%);
+							transform: rotate(45deg) translate(1px, -50%);
+							top: 50%;
+					}
+	
+					&:after {
+						-webkit-transform: rotate(-45deg) translate(1px, 50%);
+							-ms-transform: rotate(-45deg) translate(1px, 50%);
+							transform: rotate(-45deg) translate(1px, 50%);
+							top: 50%;
+					}
+	
+					span {
+						-webkit-transform: scale(0);
+							-ms-transform: scale(0);
+							transform: scale(0);
+							visibility: hidden;
+							opacity: 0;
+					}
+				}
+			}
+	
+			.menu {
+				position: relative;
+				display: block;
+				height: inherit;
+				margin-right: auto;
+	
+				@include s-max(x1100) {
+					display: none !important;
+				}
+	
+				ul.navi {
+					position: relative;
+					display: flex;
+					align-items: center;
+					height: inherit;
+	
+					& > li {
+						position: relative;
+						display: block;
+						height: inherit;
+	
+						&:first-child {
+							margin-left: -20px;
+	
+							@include s-max(x1200) {
+								margin-left: -15px;
+							}
+	
+							@include s-max(x1100) {
+								margin-left: -10px;
+							}
+						}
+	
+						& + li {
+							margin-left: 34px;
+	
+							@include s-max(x1300) {
+								margin-left: 24px;
+							}
+	
+							@include s-max(x1200) {
+								margin-left: 14px;
+							}
+						}
+	
+						&:before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 0%;
+							height: 2px;
+							background: $c1;
+							top: 0;
+							left: 0;
+							right: 0;
+							margin: auto;
+							@include transition(0.2s);
+						}
+	
+						&.active, &:hover {
+							&:before {
+								width: 100%;
+							}
+						}
+	
+						& > a {
+							position: relative;
+							display: flex;
+							height: inherit;
+							padding: 0 20px;
+							align-items: center;
+							justify-content: center;
+							text-align: center;
+							color: $w1;
+							font-size: 18px;
+							@include transition(0s);
+	
+							@include s-max(x1200) {
+								padding: 0 15px;
+							}
+	
+							@include s-max(x1100) {
+								padding: 0 10px;
+							}
+						}
+	
+						& > span.text {
+							position: relative;
+							display: flex;
+							height: inherit;
+							padding: 0 20px;
+							align-items: center;
+							justify-content: center;
+							cursor: pointer;
+							color: $w1;
+							font-size: 18px;
+	
+							@include s-max(x1200) {
+								padding: 0 15px;
+							}
+	
+							@include s-max(x1100) {
+								padding: 0 10px;
+							}
+	
+							.svg {
+								width: 25px;
+								height: 25px;
+								background: $c1;
+								margin-left: 20px;
+								margin-right: -10px;
+	
+								@include s-max(x1200) {
+									margin-left: 10px;
+								}
+							}
+						}
+	
+						ul.sub {
+							position: absolute;
+							display: block;
+							width: max-content;
+							min-width: 100%;
+							max-width: 250px;
+							top: calc(100% - 30px);
+							left: 50%;
+							transform: translateX(-50%);
+							pointer-events: none;
+	
+							& > li {
+								position: relative;
+								display: block;
+								width: 100%;
+								transform: rotateX(-75deg);
+								transform-origin: top;
+								padding-top: 1px;
+								@include transition(0.2s);
+								opacity: 0;
+								visibility: hidden;
+	
+								@for $i from 1 through 10 {
+										&:nth-child(#{$i}n) {
+												transition-delay: #{$i * 0.05}s;
+										}
+								}
+	
+								& > a {
+									position: relative;
+									display: flex;
+									padding: 5px 25px;
+									color: $w1;
+									font-size: 14px;
+									background: rgba($menu, 1);
+									width: 100%;
+									align-items: center;
+									min-height: 44px;
+	
+									&:hover {
+										background: rgba($menuh, 1);
+									}
+								}
+	
+								& > span.text {
+									position: relative;
+									display: flex;
+									padding: 5px 5px 5px 25px;
+									color: $w1;
+									font-size: 14px;
+									cursor: pointer;
+									background: rgba($menu, 1);
+									width: 100%;
+									align-items: center;
+									justify-content: space-between;
+									min-height: 44px;
+	
+									.svg {
+										width: 25px;
+										height: 25px;
+										background: $c1;
+										transform: rotate(-90deg);
+									}
+	
+									&:hover {
+										background: rgba($menuh, 1);
+									}
+								}
+							}
+	
+							li {
+								ul.sub {
+									top: 0;
+									transform: unset !important;
+									left: 100% !important;
+	
+									li {
+										padding-left: 1px;
+									}
+								}
+							}
+						}
+					}
+	
+					li {
+						&:hover {
+							& > ul.sub {
+								pointer-events: visible;
+	
+								& > li {
+									opacity: 1;
+									visibility: visible;
+											transform: rotateX(0deg);
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			.lang {
+				position: relative;
+				display: flex;
+				width: max-content;
+				flex: none;
+				height: inherit;
+				align-items: center;
+				cursor: pointer;
+	
+				.current {
+					position: relative;
+					display: flex;
+					align-items: center;
+	
+					span {
+						position: relative;
+						display: block;
+	
+						img {
+							position: relative;
+							display: block;
+							width: 30px;
+							height: auto;
+						}
+					}
+	
+					.svg {
+						width: 25px;
+						height: 25px;
+						background: $c1;
+						margin-left: 6px;
+					}
+				}
+	
+				.sub {
+					position: absolute;
+					display: block;
+					width: 86px;
+					top: calc(100% - 30px);
+					left: -15px;
+					pointer-events: none;
+	
+					li {
+						position: relative;
+						display: block;
+						padding-top: 1px;
+						@include transition(0.2s);
+						transform: rotateX(-75deg);
+						opacity: 0;
+						visibility: hidden;
+						transform-origin: top;
+	
+						@for $i from 1 through 20 {
+								&:nth-child(#{$i}n) {
+										transition-delay: #{$i * 0.05}s;
+								}
+						}
+	
+						a {
+							position: relative;
+							display: flex;
+							width: 100%;
+							padding: 10px 5px;
+							background: rgba($menu, 1);
+							align-items: center;
+							justify-content: center;
+	
+							span {
+								position: relative;
+								display: block;
+								color: $w1;
+								font-size: 12px;
+								margin: 0 auto;
+							}
+	
+							img {
+								position: relative;
+								display: block;
+								width: 30px;
+								height: auto;
+								margin: 0 auto;
+							}
+	
+							&:hover {
+								background: rgba($menuh, 1);
+							}
+						}
+					}
+				}
+	
+				&:hover {
+					.sub {
+						pointer-events: visible;
+	
+						li {
+							opacity: 1;
+							visibility: visible;
+							transform: rotateX(0deg);
+						}
+					}
+				}
+			}
+	
+			.enter-button {
+				min-width: 216px;
+				height: 59px;
+				justify-content: space-between;
+				padding: 0 23px 0 42px;
+				margin-left: 32px;
+	
+				p {
+					position: relative;
+					display: block;
+					margin-left: 15px;
+				}
+	
+				.svg {
+					width: 36px;
+					height: 36px;
+					background: $c1;
+					margin: 0 !important;
+	
+					&.abs {
+						position: absolute;
+						top: 0;
+						left: 5px;
+						opacity: 0.3;
+					}
+				}
+	
+				@include s-max(x500) {
+					justify-content: center;
+					padding: 0 5px;
+					min-width: unset;
+					width: 80px;
+	
+					span {
+						display: none;
+					}
+	
+					p {
+						margin: 0;
+					}
+				}
+			}
+		}
+	
+		&.fixed {
+			position: fixed;
+			top: 0;
+			background: rgba($menuf, 1);
+	
+			.flex {
+				height: 70px;
+	
+				.menu {
+					ul.navi {
+						& > li {
+							ul.sub {
+								top: calc(100% - 15px);
+	
+								& > li a {
+									background: rgba($menuf, 1);
+	
+									&:hover {
+										background: rgba($menuh, 0.8);
+									}
+								}
+	
+								& > li span {
+									background: rgba($menuf, 1);
+	
+									&:hover {
+										background: rgba($menuh, 0.8);
+									}
+								}
+							}
+						}
+					}
+				}
+	
+				.lang {
+					&:before {
+						background: linear-gradient(0deg, rgba($menuh, 0.7) 30%, rgba($menuh, 0) 100%);
+					}
+	
+					ul.sub {
+						top: calc(100% - 15px);
+	
+						li {
+							a {
+								background: rgba($menuf, 1);
+	
+								&:hover {
+									background: rgba($menuh, 0.8);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		@include s-max(x1100) {
+			position: fixed;
+			top: 0;
+			background: rgba($menuf, 1);
+	
+			.flex {
+				height: 70px;
+	
+				.menu {
+					ul.navi {
+						& > li {
+							ul.sub {
+								top: calc(100% - 15px);
+	
+								& > li a {
+									background: rgba($menuf, 1);
+	
+									&:hover {
+										background: rgba($menuh, 0.8);
+									}
+								}
+	
+								& > li span {
+									background: rgba($menuf, 1);
+	
+									&:hover {
+										background: rgba($menuh, 0.8);
+									}
+								}
+							}
+						}
+					}
+				}
+	
+				.lang {
+					&:before {
+						background: linear-gradient(0deg, rgba($menuh, 0.7) 30%, rgba($menuh, 0) 100%);
+					}
+	
+					ul.sub {
+						top: calc(100% - 15px);
+	
+						li {
+							a {
+								background: rgba($menuf, 1);
+	
+								&:hover {
+									background: rgba($menuh, 0.8);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.mobile-menu {
+		position: fixed;
+		display: flex;
+		width: 100%;
+		height: calc(100% - 70px);
+		top: 70px;
+		left: 0;
+		z-index: 100;
+		background: rgba($menuf, 1);
+		padding: 10px;
+		overflow: hidden auto;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transform: translateY(50px);
+		@include transition(0.2s);
+	
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: visible;
+			transform: translateY(0px);
+		}
+	
+		.menu {
+			position: relative;
+			display: block;
+			width: 100%;
+			max-width: 300px;
+			margin: auto;
+	
+			ul.navi {
+				position: relative;
+				display: block;
+				width: 100%;
+	
+				li {
+					position: relative;
+					display: block;
+	
+					& + li {
+						margin-top: 4px;
+					}
+	
+					a, span.text {
+						position: relative;
+						display: flex;
+						width: 100%;
+						height: 46px;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						color: $w1;
+						font-size: 16px;
+						background: rgba($menu, 0.6);
+	
+						.svg {
+							position: absolute;
+							top: 50%;
+							right: 5px;
+							transform: translateY(-50%) rotate(0deg);
+							width: 36px;
+							height: 36px;
+							background: $c1;
+							@include transition(0.2s);
+						}
+	
+						&.toggle {
+							.svg {
+								transform: translateY(-50%) rotate(180deg);
+							}
+						}
+					}
+	
+					ul.sub {
+						position: relative;
+						display: none;
+						width: 100%;
+						padding: 8px 4px;
+						margin-top: 4px;
+						background: rgba($menuh, 1);
+	
+						li {
+							a, span.text {
+								background: rgba($menu, 0.6);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,250 @@
+// ОБЩИЕ НАСТРОЙКИ
+$color: #000000;
+$background: #ffffff;
+$border: 1px solid #000000;
+$size: 14px;
+$font: 'arial';
+$bdradius: 0px;
+
+input[type="text"], input[type="password"], input[type="date"], 
+input[type="datetime"], input[type="number"], input[type="search"], 
+input[type="tel"], input[type="time"], input[type="url"], 
+input[type="month"], input[type="week"], input[type="email"] {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: $background;
+	border: $border;
+	color: $color;
+	font-size: $size;
+	padding: 0 15px;
+	font-family: $font;
+	@include rad($bdradius);
+
+
+	&::-webkit-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+
+	&:focus::-webkit-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus::-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-ms-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0;
+	}
+}
+
+select {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: $background;
+	border: $border;
+	color: $color;
+	font-size: $size;
+	padding: 0 15px;
+	font-family: $font;
+	@include rad($bdradius);
+}
+
+textarea {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 50px;
+	background: $background;
+	border: $border;
+	color: $color;
+	font-size: $size;
+	padding: 0 15px;
+	font-family: $font;
+	@include rad($bdradius);
+
+	&::-webkit-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+
+	&:focus::-webkit-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus::-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-ms-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0;
+	}
+}
+
+div, section {
+	position: relative;
+	display: block;
+}
+
+b, th, strong, h1, h2, h3, h4, h5, h6 {
+	
+}
+// ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ
+.all-button {
+	position: relative;
+	display: flex;
+	width: max-content;
+	padding: 0 30px;
+	height: 59px;
+	background: none;
+	border: none;
+	align-items: center;
+	font-size: 18px;
+	color: $w;
+	text-shadow: 0px 2px 2px rgba(122, 27, 27, 0.55);
+
+	&.center {
+		justify-content: center;
+	}
+
+	span {
+		position: relative;
+		display: block;
+
+		&.center {
+			text-align: center;
+		}
+	}
+
+	.svg {
+		width: 20px;
+		height: 20px;
+		margin-right: 15px;
+		background: $w;
+
+		&.right {
+			margin-right: unset;
+			margin-left: 15px;
+		}
+
+		&.center {
+			margin: 0 auto;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../images/btn.png) no-repeat center / cover;
+		@include rad(0px);
+		@include transition(0.2s);
+		box-shadow: 0 0 43px rgba(#651f3a, 0.4);
+	}
+
+	&.green {
+		&:before {
+			background: url(../images/btng.png) no-repeat center / cover;
+		}
+	}
+
+	@include s-min(x1000) {
+		&:hover {
+			&:before {
+				filter: hue-rotate(-60deg);
+			}
+		}
+	}
+
+	&.false {
+		&:before {
+			filter: grayscale(100%) brightness(2.5);
+			opacity: 0.25;
+		}
+
+		@include s-min(x1000) {
+			&:hover {
+				&:before {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+.all-submit {
+	position: relative;
+	display: flex;
+	width: max-content;
+	padding: 0 30px;
+	height: 38px;
+	background: none;
+	border: 1px solid $c5;
+	@include rad(0px);
+	color: $w3;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	@include transition(0.2s);
+	font-size: 14px;
+
+	@include s-min(x1000) {
+		padding-bottom: 2px !important;
+
+		&:hover {
+			background: $c5;
+			color: $b1;
+		}
+	}
+}
