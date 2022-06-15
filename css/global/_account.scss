@@ -35,6 +35,10 @@
 
 .site {
 
+  button {
+    font-family: 'BeaufortforLOL-Bold', sans-serif;
+  }
+
   .choices__item--choice {
     transition: background-color 0.3s, color 0.3s;
 
@@ -116,9 +120,10 @@
     }
   }
 
+  
   .user-account {
     border: 1px solid rgb(39, 30, 48);
-    border-radius: 30px;
+    border-radius: 25px;
 
 
     @include r(968) {
@@ -127,7 +132,7 @@
 
     &__inner {
       display: flex;
-      border-radius: 30px;
+      border-radius: 25px;
       overflow: hidden;
 
       @include r(1340) {
@@ -158,11 +163,11 @@
       position: relative;
       width: 350px;
       padding: 20px 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-top-left-radius: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-top-left-radius: 25px;
 
       @include r(968) {
-        border-top-right-radius: 30px;
+        border-top-right-radius: 25px;
         width: 100%;
       }
 
@@ -170,18 +175,22 @@
         width: 100%;
       }
 
+
+
+
       &::before {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        bottom: -4px;
+        bottom: -10px;
         display: block;
         content: "";
         background-image: url("../images/decor-bg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        opacity: 0.7;
       }
     }
 
@@ -210,10 +219,9 @@
       align-items: center;
       margin-bottom: 25px;
       width: 100%;
-       border: 1px solid rgb(89, 77, 87);
+      border: 1px solid rgb(89, 77, 87);
       background-color: rgba(39, 39, 39, 0.7);
       padding: 2px 20px;
-      border: 1px solid transparent;
       border-radius: 50px;
       font-family: "Alice-Regular", sans-serif;
       font-size: 14px;
@@ -222,7 +230,7 @@
         font-family: "BeaufortforLOL-Bold", sans-serif;
       }
 
-      
+
 
       & span {
         display: inline-block;
@@ -231,6 +239,7 @@
         font-size: 20px;
       }
     }
+
     &__balans-btn {
       position: absolute;
       display: block;
@@ -240,15 +249,17 @@
       width: 30px;
       height: 30px;
       border-radius: 99px;
-      background-image: url("../images/dollar-donat.png");
+      background-image: url("../images/dollar-donat2.png");
       background-repeat: no-repeat;
       background-position: center center;
-      filter:brightness(90%);
+      background-size: cover;
+      filter: brightness(90%);
       transition: filter 0.3s;
+
       &:hover {
-        filter:brightness(120%);
+        filter: brightness(120%);
       }
-      
+
     }
   }
 
@@ -256,7 +267,7 @@
     position: relative;
     padding-bottom: 230px;
     background-color: rgba(31, 30, 30, 0.6);
-    border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 25px;
     height: 100%;
 
     @include r(1340) {
@@ -265,12 +276,12 @@
 
     @include r(968) {
       padding-bottom: 50px;
-      border-bottom-right-radius: 30px;
+      border-bottom-right-radius: 25px;
     }
 
     &::before {
       position: absolute;
-      bottom: 0;
+      bottom: 230px;
       left: 50%;
       transform: translateX(-50%);
       display: block;
@@ -373,7 +384,7 @@
 
     @include r(968) {
       overflow: hidden;
-      border-radius: 30px;
+      border-radius: 25px;
       // order: -1;
       margin-bottom: 30px;
     }
@@ -423,7 +434,7 @@
 
     &__info {
       // margin-top: -3px;
-      padding: 19px 60px;
+      padding: 20px 60px;
       background-color: rgba(255, 255, 255, 0.2);
 
       & span {
@@ -464,11 +475,11 @@
     padding: 30px 60px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 25px;
     height: 100%;
 
     @include r(968) {
-      border-bottom-left-radius: 30px;
+      border-bottom-left-radius: 25px;
       background-color: rgba(0, 0, 0, 0.4);
     }
 
@@ -489,7 +500,7 @@
     }
   }
 
-  
+
   .user-form {
     max-width: 600px;
     width: 100%;
@@ -702,7 +713,7 @@
       }
 
       width: 300px;
-      
+
     }
 
     @include r(1200) {
@@ -725,7 +736,7 @@
     font-size: 16px;
     line-height: 21px;
     background-color: rgba(0, 0, 0, 0.5);
-    border-top-right-radius: 30px;
+    border-top-right-radius: 25px;
     font-family: "Alice-Regular", sans-serif;
 
     @include r(1340) {
@@ -781,22 +792,20 @@
   }
 
   .card-shop {
-    
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include r(1340) {
-      
-      
-    }
+    @include r(1340) {}
 
     @include r(968) {
       max-width: 100%;
     }
+
     @include r(500) {
-     justify-content: center;
+      justify-content: center;
     }
 
     &__item {
@@ -805,6 +814,7 @@
       @include r(1340) {
         margin-right: 10px;
       }
+
       @include r(440) {
         margin-right: 0;
       }
@@ -867,6 +877,7 @@
       margin-bottom: 15px;
       color: #fd9b38;
       font-size: 18px;
+
       @include r(440) {
         font-size: 20px;
         margin-bottom: 25px;
@@ -908,7 +919,7 @@
     margin-bottom: 35px;
     font-size: 24px;
     color: #ffc899;
-    font-family: "XO_Oriel_Nu", sans-serif;
+    font-family: "Alice-Regular", sans-serif;
   }
 
   .referral-code {
@@ -916,11 +927,11 @@
   }
 
   .referral-descr {
-    max-width: 475px;
+    max-width: 485px;
     margin: 0 auto 130px;
     font-size: 16px;
     color: #ffc899;
-    font-family: "XO_Oriel_Nu", sans-serif;
+    font-family: "Alice-Regular", sans-serif;
   }
 
   .referral-btn::after {
@@ -1108,7 +1119,6 @@
   border: 1px solid rgb(89, 77, 87);
   background-color: rgba(39, 39, 39, 0.7);
   padding: 0 15px;
-  border: 1px solid transparent;
   border-radius: 50px;
   font-size: 14px;
   font-family: "Alice-Regular", sans-serif;
@@ -1177,7 +1187,7 @@
 
 .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
   border: 1px solid rgb(89, 77, 87);
-      background-color: rgba(39, 39, 39, 0.7);
+  background-color: rgba(39, 39, 39, 0.7);
 }
 
 .choices__list--dropdown .choices__item--selectable:after {
@@ -1217,6 +1227,7 @@
   .choices {
     margin: 0 auto;
     max-width: 600px;
+
     @include r(1200) {
       max-width: 100%;
     }
@@ -1355,11 +1366,11 @@
   display: block;
   position: absolute;
   width: 100%;
-  bottom: 20px;
+  bottom: 25px;
 
   &::before {
     position: absolute;
-    bottom: -10px;
+    bottom: -11px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -1376,7 +1387,7 @@
 
   &::before {
     position: absolute;
-    bottom: -10px;
+    bottom: -18px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -1418,8 +1429,9 @@
 
   &:not(:last-child) {
     margin-right: 20px;
+
     @include r(492) {
-     margin-right: 0;
+      margin-right: 0;
     }
   }
 
@@ -1505,7 +1517,7 @@
 
 .account-header__top-img {
   max-width: 100%;
-  height: 99%;
+  height: 100%;
 }
 
 .user-form__label.auction-label {
@@ -1522,6 +1534,7 @@
     @include r(1200) {
       margin-right: 0;
     }
+
     @include r(430) {
       margin-right: 0;
     }
@@ -1534,12 +1547,14 @@
     font-size: 16px;
   }
 }
-.user-form__label.auction-label{
+
+.user-form__label.auction-label {
   @include r(1200) {
     margin-right: 0;
     margin-bottom: 0;
   }
 }
+
 .opasity {
   opacity: 0;
   pointer-events: none;
@@ -1562,6 +1577,7 @@
     font-size: 14px;
     margin-right: 15px;
   }
+
   @include r(544) {
     margin-left: 0;
     margin-top: 15px;
@@ -1614,6 +1630,7 @@
 
 .user-form__btn.btn-auction {
   width: 150px;
+  padding-right: 20px;
   margin: 0;
   transform: translateY(2px);
 
@@ -1641,6 +1658,7 @@
 .user-form__btn.btn-lot {
   width: 300px;
   margin-right: 20px;
+  line-height: 28px;
 
   @include r(1115) {
     margin-right: 0;
@@ -1739,6 +1757,7 @@ label.user-form__label.auction-label.checkbox-auction {
   @include r(1200) {
     margin-top: 20px;
   }
+
   @include r(544) {
     flex-direction: column;
     align-items: baseline;
@@ -2116,7 +2135,7 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
 .user-account-auction .user-account__sidebar {
   @include r(1340) {
     width: 100%;
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 25px;
     overflow: hidden;
     margin-bottom: 30px;
   }
@@ -2151,14 +2170,17 @@ label.user-form__label {
 
   @include r(1200) {
     width: 100%;
-    
+
   }
 }
+
 input#password-input2 {
-font-size: 16px;
-&::placeholder{
   font-size: 16px;
-}
+
+  &::placeholder {
+    font-size: 16px;
+  }
+
   @include r(1200) {
     width: 100%;
     font-size: 16px;
@@ -2166,51 +2188,54 @@ font-size: 16px;
 }
 
 
-.account-header-shop .select-auction ~.choices{
-  max-width:  100% ;
-}
-.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner{
-  margin-right: 0;
-  max-width:  100%;
+.account-header-shop .select-auction~.choices {
+  max-width: 100%;
 }
 
+.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
+  @include r(500) {
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 
+}
 
 
 .account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
 
   @include r(500) {
     margin-right: 0;
-  max-width: 100%;
+    max-width: 100%;
     width: 100%;
   }
- 
+
 }
 
 
-.choices[data-type*=select-one] .choices__inner{
+.choices[data-type*=select-one] .choices__inner {
   @include r(500) {
-   height: 50px;
-   display: flex;
-   align-items:center;
+    height: 50px;
+    display: flex;
+    align-items: center;
   }
 }
 
-.choices[data-type*="select-one"]:after{
+.choices[data-type*="select-one"]:after {
   @include r(500) {
-   top: 50%;
-   }
+    top: 50%;
+  }
 }
 
-.site .user-account__balans{
+.site .user-account__balans {
   @include r(500) {
     padding: 11px 20px;
-    }
+  }
 }
 
-.site .user-account__balans-btn{
+.site .user-account__balans-btn {
   @include r(500) {
     width: 50px;
     height: 50px;
-    }
+  }
 }
