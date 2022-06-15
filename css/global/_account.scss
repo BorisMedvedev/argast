@@ -210,7 +210,8 @@
       align-items: center;
       margin-bottom: 25px;
       width: 100%;
-      background-color: rgb(31, 30, 30);
+      border: 1px solid rgb(89, 77, 87);
+      background-color: rgba(39, 39, 39, 0.7);
       padding: 2px 20px;
       border: 1px solid transparent;
       border-radius: 50px;
@@ -254,7 +255,7 @@
   .sidebar-buttons {
     position: relative;
     padding-bottom: 230px;
-    background-color: rgb(31, 30, 30);
+    background-color: rgba(31, 30, 30, 0.4);
     border-bottom-left-radius: 30px;
     height: 100%;
 
@@ -488,6 +489,7 @@
     }
   }
 
+  
   .user-form {
     max-width: 600px;
     width: 100%;
@@ -496,8 +498,8 @@
     &__input {
       margin-bottom: 22px;
       border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background-color: rgb(31, 30, 30);
+      border: 1px solid rgb(89, 77, 87);
+      background-color: rgba(39, 39, 39, 0.7);
       color: #fff;
       font-size: 16px;
 
@@ -594,8 +596,8 @@
 
 
     .choices__inner {
-      border: 1px solid rgb(39, 30, 48);
-      background-color: rgba(0, 0, 0, 0.251);
+      border: 1px solid rgb(89, 77, 87);
+      background-color: rgba(39, 39, 39, 0.7);
       width: 300px;
       height: 50px;
       min-height: 50px;
@@ -803,6 +805,9 @@
       @include r(1340) {
         margin-right: 10px;
       }
+      @include r(440) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -830,7 +835,9 @@
 
     @include r(440) {
       max-width: 100%;
-      padding: 20px 10px;
+      padding: 40px 30px;
+      margin-right: 0;
+      text-align: center;
     }
 
     &__title {
@@ -1093,8 +1100,8 @@
   display: inline-block;
   vertical-align: baseline;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgb(31, 30, 30);
+  border: 1px solid rgb(89, 77, 87);
+  background-color: rgba(39, 39, 39, 0.7);
   padding: 0 15px;
   border: 1px solid transparent;
   border-radius: 50px;
@@ -1164,8 +1171,8 @@
 }
 
 .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgb(31, 30, 30);
+  border: 1px solid rgb(89, 77, 87);
+      background-color: rgba(39, 39, 39, 0.7);
 }
 
 .choices__list--dropdown .choices__item--selectable:after {
@@ -1215,8 +1222,8 @@
     align-items: center;
     max-width: 600px;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgb(31, 30, 30);
+    border: 1px solid rgb(89, 77, 87);
+    background-color: rgba(39, 39, 39, 0.7);
     padding: 0 15px;
     border-radius: 6px;
     font-size: 18px;
@@ -1563,6 +1570,9 @@
   }
 }
 
+
+
+
 .user-form__input.auction-input {
   max-width: 80px;
   padding: 15px;
@@ -1588,8 +1598,8 @@
   font-size: 16px;
   max-width: 220px;
   margin-right: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgb(31, 30, 30);
+  border: 1px solid rgb(89, 77, 87);
+  background-color: rgba(39, 39, 39, 0.7);
 
   @include r(1219) {
     width: 300px;
