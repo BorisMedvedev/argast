@@ -2344,7 +2344,7 @@ button {
 .site .sidebar-buttons {
   position: relative;
   padding-bottom: 230px;
-  background-color: rgba(31, 30, 30, 0.4);
+  background-color: rgba(31, 30, 30, 0.6);
   border-bottom-left-radius: 30px;
   height: 100%;
 }
@@ -3040,8 +3040,8 @@ button {
 
 @media (max-width: 440px) {
   .site .cart__title {
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 28px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3054,7 +3054,8 @@ button {
 
 @media (max-width: 440px) {
   .site .cart__descr {
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3063,6 +3064,13 @@ button {
   margin-bottom: 15px;
   color: #fd9b38;
   font-size: 18px;
+}
+
+@media (max-width: 440px) {
+  .site .cart__price {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
 }
 
 .site .cart .btn-cart {
@@ -3075,9 +3083,9 @@ button {
 
 @media (max-width: 440px) {
   .site .cart .btn-cart {
-    font-size: 14px;
-    width: 160px;
-    height: 30px;
+    font-size: 16px;
+    width: 250px;
+    height: 45px;
   }
 }
 
