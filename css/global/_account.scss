@@ -34,6 +34,27 @@
 }
 
 .site {
+
+  .choices__item--choice {
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgb(126, 122, 125);
+      color: #ffc899;
+    }
+  }
+
+  .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgb(126, 122, 125);
+      color: #ffc899;
+    }
+  }
+
   .account {
     padding-bottom: 200px;
 
@@ -73,8 +94,11 @@
     &__btn-exit {
       position: relative;
       width: 120px;
-      height: 28px;
+      height: 30px;
       text-transform: uppercase;
+      line-height: 22px;
+      margin-top: 20px;
+      margin-bottom: 13px;
 
       & span {
         padding-right: 30px;
@@ -95,7 +119,7 @@
   .user-account {
     border: 1px solid rgb(39, 30, 48);
     border-radius: 30px;
-    overflow: hidden;
+
 
     @include r(968) {
       border: none;
@@ -104,6 +128,7 @@
     &__inner {
       display: flex;
       border-radius: 30px;
+      overflow: hidden;
 
       @include r(1340) {
         justify-content: center;
@@ -181,10 +206,12 @@
 
     &__balans {
       position: relative;
-      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
       width: 100%;
-      background-color: #000;
-      padding: 10px 20px;
+      background-color: rgb(31, 30, 30);
+      padding: 2px 20px;
       border: 1px solid transparent;
       border-radius: 50px;
       font-family: "Alice-Regular", sans-serif;
@@ -194,21 +221,7 @@
         font-family: "BeaufortforLOL-Bold", sans-serif;
       }
 
-      &::before {
-        position: absolute;
-        right: -1px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: block;
-        content: "";
-        width: 42px;
-        height: 42px;
-        background-color: red;
-        border-radius: 99px;
-        background-image: url("../images/dollar.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
+      
 
       & span {
         display: inline-block;
@@ -216,6 +229,25 @@
         color: #fd9b38;
         font-size: 20px;
       }
+    }
+    &__balans-btn {
+      position: absolute;
+      display: block;
+      right: -2px;
+      top: 49%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 99px;
+      background-image: url("../images/dollar-donat.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      filter:brightness(90%);
+      transition: filter 0.3s;
+      &:hover {
+        filter:brightness(120%);
+      }
+      
     }
   }
 
@@ -341,7 +373,7 @@
     @include r(968) {
       overflow: hidden;
       border-radius: 30px;
-      order: -1;
+      // order: -1;
       margin-bottom: 30px;
     }
 
@@ -359,19 +391,15 @@
     }
 
     &__top-item {
-      @include r(1340) {
-      }
+      @include r(1340) {}
 
-      @include r(968) {
-      }
+      @include r(968) {}
     }
 
     &__top-img {
-      @include r(1340) {
-      }
+      @include r(1340) {}
 
-      @include r(968) {
-      }
+      @include r(968) {}
     }
 
     &__top-title {
@@ -427,7 +455,7 @@
     }
   }
 
-  .account-header__top-img-link:hover + .account-header__top-title::before {
+  .account-header__top-img-link:hover+.account-header__top-title::before {
     width: 150px;
   }
 
@@ -471,7 +499,7 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       background-color: rgb(31, 30, 30);
       color: #fff;
-      font-size: 22px;
+      font-size: 16px;
 
       &::placeholder {
         color: #696562;
@@ -543,6 +571,7 @@
       @include r(1200) {
         margin-right: 0;
         margin-bottom: 20px;
+        width: 100%;
       }
     }
   }
@@ -562,21 +591,36 @@
       align-items: center;
     }
 
+
+
     .choices__inner {
+      border: 1px solid rgb(39, 30, 48);
+      background-color: rgba(0, 0, 0, 0.251);
       width: 300px;
       height: 50px;
+      min-height: 50px;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgb(126, 122, 125);
+        color: #ffc899;
+      }
 
       @include r(1340) {
         width: 150px;
       }
 
       @include r(1200) {
-        width: 300px;
+        width: 100%;
+        max-width: 100%;
       }
     }
 
     .choices[data-type*="select-one"]:after {
-      top: 26px;
+      top: 30px;
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -609,7 +653,7 @@
     }
 
     @include r(1200) {
-      width: 300px;
+      width: 100%;
       margin-left: 0;
     }
 
@@ -652,14 +696,16 @@
       font-size: 14px;
 
       &::placeholder {
-        font-size: 12px;
+        font-size: 14px;
       }
 
-      width: 170px;
+      width: 300px;
+      
     }
 
     @include r(1200) {
-      width: 300px;
+      width: 100%;
+      max-width: 100%;
       margin-bottom: 20px;
     }
   }
@@ -673,7 +719,7 @@
   }
 
   .header-shop {
-    padding: 15px;
+    padding: 16px;
     font-size: 16px;
     line-height: 21px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -733,23 +779,26 @@
   }
 
   .card-shop {
-    max-width: 850px;
+    
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     @include r(1340) {
-      max-width: 600px;
-      justify-content: center;
+      
+      
     }
 
     @include r(968) {
       max-width: 100%;
     }
+    @include r(500) {
+     justify-content: center;
+    }
 
     &__item {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
 
       @include r(1340) {
         margin-right: 10px;
@@ -776,12 +825,12 @@
     }
 
     @include r(1200) {
-      max-width: 190px;
+      max-width: 219px;
     }
 
     @include r(440) {
-      max-width: 140px;
-      padding: 5px;
+      max-width: 100%;
+      padding: 20px 10px;
     }
 
     &__title {
@@ -821,7 +870,8 @@
 
       @include r(440) {
         font-size: 14px;
-        width: 110px;
+        width: 160px;
+        height: 30px;
       }
 
       &::after {
@@ -1028,6 +1078,7 @@
 
 .user-form__btn {
   transition: filter 0.3s;
+  height: 50px;
 }
 
 .user-form__btn:hover {
@@ -1040,15 +1091,24 @@
 
 .choices__inner {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: baseline;
   width: 100%;
-  background-color: #000;
-  padding: 5px 5px 5px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgb(31, 30, 30);
+  padding: 0 15px;
   border: 1px solid transparent;
   border-radius: 50px;
   font-size: 14px;
   font-family: "Alice-Regular", sans-serif;
   overflow: hidden;
+  min-height: 30px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(126, 122, 125);
+    color: #ffc899;
+  }
 }
 
 .choices[data-type*="select-one"] .choices__input {
@@ -1056,8 +1116,13 @@
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid transparent;
-  background-color: #000;
+  background-color: rgb(31, 30, 30);
   margin: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(126, 122, 125);
+  }
 }
 
 .choices__placeholder {
@@ -1075,7 +1140,7 @@
   z-index: 1;
   position: absolute;
   width: 100%;
-  background-color: #000;
+  background-color: rgb(31, 30, 30);
   border: 1px solid transparent;
   top: 100%;
   margin-top: -1px;
@@ -1099,7 +1164,8 @@
 }
 
 .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgb(31, 30, 30);
 }
 
 .choices__list--dropdown .choices__item--selectable:after {
@@ -1114,8 +1180,8 @@
 
 .choices[data-type*="select-one"]:after {
   content: "";
-  height: 0;
-  width: 0;
+  height: 15px;
+  width: 15px;
   border-style: solid;
   border-color: transparent;
   border-width: 5px;
@@ -1123,10 +1189,10 @@
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  right: 20px;
-  top: 50%;
+  right: 7px;
+  top: 46%;
   transform: translateY(-50%);
-  margin-top: -2.5px;
+  margin-top: 0;
   pointer-events: none;
 }
 
@@ -1139,21 +1205,31 @@
   .choices {
     margin: 0 auto;
     max-width: 600px;
+    @include r(1200) {
+      max-width: 100%;
+    }
   }
 
   .choices__inner {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    align-items: center;
     max-width: 600px;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgb(31, 30, 30);
-    padding: 5px 5px 5px 15px;
+    padding: 0 15px;
     border-radius: 6px;
     font-size: 18px;
     text-align: left;
-    min-height: 44px;
+    min-height: 50px;
     overflow: hidden;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgb(126, 122, 125);
+      color: #ffc899;
+    }
   }
 
   .choices[data-type*="select-one"] .choices__input {
@@ -1192,7 +1268,8 @@
   }
 
   .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-    background-color: #000;
+
+    background-color: rgb(31, 30, 30);
   }
 
   .choices__list--dropdown .choices__item--selectable:after {
@@ -1205,10 +1282,10 @@
     transform: translateY(-50%);
   }
 
-  .choices[data-type*="select-one"]:after {
+  .choices[data-type*="select-one"]::after {
     content: "";
-    height: 0;
-    width: 0;
+    height: 15;
+    width: 15;
     border-style: solid;
     border-color: transparent;
     border-width: 5px;
@@ -1217,7 +1294,7 @@
     background-position: center;
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     margin-top: -2.5px;
     pointer-events: none;
@@ -1230,8 +1307,9 @@
 }
 
 .account-header__bottom .person-form-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   max-width: 600px;
+  margin-bottom: 80px;
 
   &::after {
     position: absolute;
@@ -1302,18 +1380,18 @@
   margin-bottom: 20px;
   color: #ffc899;
   font-size: 16px;
-  font-family: "Alice-Regular" sans-serif;
+  font-family: "Alice-Regular"sans-serif;
 }
 
 .donat-descr {
   color: #ffc899;
   margin-bottom: 35px;
-  font-family: "XO_Oriel_Nu" sans-serif;
+  font-family: "XO_Oriel_Nu"sans-serif;
   font-size: 16px;
 }
 
 .donat-link {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   position: relative;
   display: inline-block;
   border: 1px solid rgb(89, 77, 87);
@@ -1328,6 +1406,9 @@
 
   &:not(:last-child) {
     margin-right: 20px;
+    @include r(492) {
+     margin-right: 0;
+    }
   }
 
   &:hover {
@@ -1426,8 +1507,11 @@
   &:nth-child(2) {
     margin-right: 25px;
 
+    @include r(1200) {
+      margin-right: 0;
+    }
     @include r(430) {
-      margin-right: 122px;
+      margin-right: 0;
     }
   }
 
@@ -1438,7 +1522,12 @@
     font-size: 16px;
   }
 }
-
+.user-form__label.auction-label{
+  @include r(1200) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
 .opasity {
   opacity: 0;
   pointer-events: none;
@@ -1455,6 +1544,12 @@
   margin-top: -18px;
   margin-left: 12px;
 
+  @include r(1200) {
+    margin-left: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    margin-right: 15px;
+  }
   @include r(544) {
     margin-left: 0;
     margin-top: 15px;
@@ -1472,7 +1567,7 @@
   max-width: 80px;
   padding: 15px;
 
-  @include r(430) {
+  @include r(1200) {
     max-width: 100%;
   }
 }
@@ -1485,7 +1580,7 @@
   max-width: 25px;
 }
 
-.site .form-auction + .choices {
+.site .form-auction+.choices {
   margin-right: 0;
 }
 
@@ -1493,6 +1588,8 @@
   font-size: 16px;
   max-width: 220px;
   margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgb(31, 30, 30);
 
   @include r(1219) {
     width: 300px;
@@ -1503,9 +1600,10 @@
 .user-form__btn.btn-auction {
   width: 150px;
   margin: 0;
+  transform: translateY(2px);
 
   @include r(1219) {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   @include r(1115) {
@@ -1518,10 +1616,10 @@
   }
 
   @include r(544) {
-    margin-bottom: 20px;
+    margin-bottom: -10px;
     margin-top: 20px;
     margin-left: 0;
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -1537,7 +1635,9 @@
   }
 
   @include r(544) {
-    width: 290px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -1559,6 +1659,7 @@
   @include r(544) {
     margin-top: 10px;
     font-size: 14px;
+    width: 100%;
   }
 
   & span {
@@ -1605,7 +1706,7 @@
   }
 }
 
-.checkbox-input-radio:checked + .radio-castom::before {
+.checkbox-input-radio:checked+.radio-castom::before {
   opacity: 1;
 }
 
@@ -1620,6 +1721,9 @@ label.user-form__label.auction-label.checkbox-auction {
   justify-content: space-between;
   align-items: center;
 
+  @include r(1200) {
+    margin-top: 20px;
+  }
   @include r(544) {
     flex-direction: column;
     align-items: baseline;
@@ -1690,6 +1794,7 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 70px;
 
@@ -1705,9 +1810,10 @@ label.user-form__label.auction-label.checkbox-auction {
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url("../images/search2.png");
+
       @include r(500) {
         display: none;
-  
+
       }
     }
   }
@@ -1739,16 +1845,17 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 50px;
-      
+
     }
   }
 
   // .price-table__classtitle
 
   &__classtitle {
-    font-family: "Alice-Regular" sans-serif;
+    font-family: "Alice-Regular"sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
@@ -1767,9 +1874,10 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 40px;
-      
+
     }
   }
 
@@ -1798,9 +1906,10 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 40px;
-      
+
     }
   }
 
@@ -1829,9 +1938,10 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 100px;
-      
+
     }
   }
 
@@ -1860,9 +1970,10 @@ label.user-form__label.auction-label.checkbox-auction {
     @include r(968) {
       font-size: 12px;
     }
+
     @include r(500) {
       max-width: 70px;
-      
+
     }
   }
 
@@ -1887,6 +1998,7 @@ label.user-form__label.auction-label.checkbox-auction {
       width: 50px;
     }
   }
+
   button.user-form__btn.btn-cart.btn-reset.price-table__btn--mb {
     @include r(500) {
       font-size: 10px;
@@ -1896,8 +2008,7 @@ label.user-form__label.auction-label.checkbox-auction {
 
   // .price-table__btntitle
 
-  &__btntitle {
-  }
+  &__btntitle {}
 }
 
 .user-form__btn.price-table__btn--mb {
@@ -1948,7 +2059,7 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("../images/auction.png");
+    background-image: url("../images/auction.png") !important;
   }
 }
 
@@ -2015,3 +2126,76 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
 }
 
 
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
+  outline: none;
+}
+
+
+label.user-form__label {
+
+  @include r(1200) {
+    width: 100%;
+    
+  }
+}
+input#password-input2 {
+font-size: 16px;
+&::placeholder{
+  font-size: 16px;
+}
+  @include r(1200) {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+
+.account-header-shop .select-auction ~.choices{
+  max-width:  100% ;
+}
+.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner{
+  margin-right: 0;
+  max-width:  100%;
+}
+
+
+
+
+.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
+
+  @include r(500) {
+    margin-right: 0;
+  max-width: 100%;
+    width: 100%;
+  }
+ 
+}
+
+
+.choices[data-type*=select-one] .choices__inner{
+  @include r(500) {
+   height: 50px;
+   display: flex;
+   align-items:center;
+  }
+}
+
+.choices[data-type*="select-one"]:after{
+  @include r(500) {
+   top: 50%;
+   }
+}
+
+.site .user-account__balans{
+  @include r(500) {
+    padding: 11px 20px;
+    }
+}
+
+.site .user-account__balans-btn{
+  @include r(500) {
+    width: 50px;
+    height: 50px;
+    }
+}

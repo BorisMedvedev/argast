@@ -2089,6 +2089,28 @@ button {
   cursor: pointer;
 }
 
+.site .choices__item--choice {
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.site .choices__item--choice:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+  color: #ffc899;
+}
+
+.site .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.site .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+  color: #ffc899;
+}
+
 .site .account {
   padding-bottom: 200px;
 }
@@ -2132,8 +2154,11 @@ button {
 .site .account__btn-exit {
   position: relative;
   width: 120px;
-  height: 28px;
+  height: 30px;
   text-transform: uppercase;
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 13px;
 }
 
 .site .account__btn-exit span {
@@ -2153,7 +2178,6 @@ button {
 .site .user-account {
   border: 1px solid #271e30;
   border-radius: 30px;
-  overflow: hidden;
 }
 
 @media (max-width: 968px) {
@@ -2167,6 +2191,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 @media (max-width: 1340px) {
@@ -2262,10 +2287,16 @@ button {
 
 .site .user-account__balans {
   position: relative;
-  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
   width: 100%;
-  background-color: #000;
-  padding: 10px 20px;
+  background-color: #1f1e1e;
+  padding: 2px 20px;
   border: 1px solid transparent;
   border-radius: 50px;
   font-family: "Alice-Regular", sans-serif;
@@ -2276,28 +2307,37 @@ button {
   font-family: "BeaufortforLOL-Bold", sans-serif;
 }
 
-.site .user-account__balans::before {
-  position: absolute;
-  right: -1px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  content: "";
-  width: 42px;
-  height: 42px;
-  background-color: red;
-  border-radius: 99px;
-  background-image: url("../images/dollar.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .site .user-account__balans span {
   display: inline-block;
   padding-left: 30px;
   color: #fd9b38;
   font-size: 20px;
+}
+
+.site .user-account__balans-btn {
+  position: absolute;
+  display: block;
+  right: -2px;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background-image: url("../images/dollar-donat.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.site .user-account__balans-btn:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 .site .sidebar-buttons {
@@ -2435,9 +2475,6 @@ button {
   .site .account-header {
     overflow: hidden;
     border-radius: 30px;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     margin-bottom: 30px;
   }
 }
@@ -2572,7 +2609,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: #1f1e1e;
   color: #fff;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .site .user-form__input::-webkit-input-placeholder {
@@ -2679,6 +2716,7 @@ button {
   .site .account-header-shop .choices {
     margin-right: 0;
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 
@@ -2714,8 +2752,19 @@ button {
 }
 
 .site .user-form-shop .choices__inner {
+  border: 1px solid #271e30;
+  background-color: rgba(0, 0, 0, 0.251);
   width: 300px;
   height: 50px;
+  min-height: 50px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.site .user-form-shop .choices__inner:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+  color: #ffc899;
 }
 
 @media (max-width: 1340px) {
@@ -2726,12 +2775,15 @@ button {
 
 @media (max-width: 1200px) {
   .site .user-form-shop .choices__inner {
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 .site .user-form-shop .choices[data-type*="select-one"]:after {
-  top: 26px;
+  top: 30px;
+  width: 15px;
+  height: 15px;
 }
 
 .site .shop-title {
@@ -2768,7 +2820,7 @@ button {
 
 @media (max-width: 1200px) {
   .site .btn-shop {
-    width: 300px;
+    width: 100%;
     margin-left: 0;
   }
 }
@@ -2805,25 +2857,26 @@ button {
 @media (max-width: 1340px) {
   .site .input-shop {
     font-size: 14px;
-    width: 170px;
+    width: 300px;
   }
   .site .input-shop::-webkit-input-placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
   .site .input-shop:-ms-input-placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
   .site .input-shop::-ms-input-placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
   .site .input-shop::placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 1200px) {
   .site .input-shop {
-    width: 300px;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
   }
 }
@@ -2837,7 +2890,7 @@ button {
 }
 
 .site .header-shop {
-  padding: 15px;
+  padding: 16px;
   font-size: 16px;
   line-height: 21px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -2901,7 +2954,6 @@ button {
 }
 
 .site .card-shop {
-  max-width: 850px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2913,23 +2965,22 @@ button {
           justify-content: space-between;
 }
 
-@media (max-width: 1340px) {
-  .site .card-shop {
-    max-width: 600px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 @media (max-width: 968px) {
   .site .card-shop {
     max-width: 100%;
   }
 }
 
+@media (max-width: 500px) {
+  .site .card-shop {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .site .card-shop__item {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1340px) {
@@ -2962,14 +3013,14 @@ button {
 
 @media (max-width: 1200px) {
   .site .cart {
-    max-width: 190px;
+    max-width: 219px;
   }
 }
 
 @media (max-width: 440px) {
   .site .cart {
-    max-width: 140px;
-    padding: 5px;
+    max-width: 100%;
+    padding: 20px 10px;
   }
 }
 
@@ -3016,7 +3067,8 @@ button {
 @media (max-width: 440px) {
   .site .cart .btn-cart {
     font-size: 14px;
-    width: 110px;
+    width: 160px;
+    height: 30px;
   }
 }
 
@@ -3240,6 +3292,7 @@ button {
   transition: -webkit-filter 0.3s;
   transition: filter 0.3s;
   transition: filter 0.3s, -webkit-filter 0.3s;
+  height: 50px;
 }
 
 .user-form__btn:hover {
@@ -3253,15 +3306,25 @@ button {
 
 .choices__inner {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: baseline;
   width: 100%;
-  background-color: #000;
-  padding: 5px 5px 5px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1f1e1e;
+  padding: 0 15px;
   border: 1px solid transparent;
   border-radius: 50px;
   font-size: 14px;
   font-family: "Alice-Regular", sans-serif;
   overflow: hidden;
+  min-height: 30px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.choices__inner:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+  color: #ffc899;
 }
 
 .choices[data-type*="select-one"] .choices__input {
@@ -3269,8 +3332,13 @@ button {
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid transparent;
-  background-color: #000;
+  background-color: #1f1e1e;
   margin: 0;
+}
+
+.choices[data-type*="select-one"] .choices__input:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
 }
 
 .choices__placeholder {
@@ -3288,7 +3356,7 @@ button {
   z-index: 1;
   position: absolute;
   width: 100%;
-  background-color: #000;
+  background-color: #1f1e1e;
   border: 1px solid transparent;
   top: 100%;
   margin-top: -1px;
@@ -3312,7 +3380,8 @@ button {
 }
 
 .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1f1e1e;
 }
 
 .choices__list--dropdown .choices__item--selectable:after {
@@ -3328,8 +3397,8 @@ button {
 
 .choices[data-type*="select-one"]:after {
   content: "";
-  height: 0;
-  width: 0;
+  height: 15px;
+  width: 15px;
   border-style: solid;
   border-color: transparent;
   border-width: 5px;
@@ -3337,11 +3406,11 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  right: 20px;
-  top: 50%;
+  right: 7px;
+  top: 46%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin-top: -2.5px;
+  margin-top: 0;
   pointer-events: none;
 }
 
@@ -3356,19 +3425,37 @@ button {
   max-width: 600px;
 }
 
+@media (max-width: 1200px) {
+  .account-header .choices {
+    max-width: 100%;
+  }
+}
+
 .account-header .choices__inner {
-  display: inline-block;
-  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 600px;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: #1f1e1e;
-  padding: 5px 5px 5px 15px;
+  padding: 0 15px;
   border-radius: 6px;
   font-size: 18px;
   text-align: left;
-  min-height: 44px;
+  min-height: 50px;
   overflow: hidden;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.account-header .choices__inner:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+  color: #ffc899;
 }
 
 .account-header .choices[data-type*="select-one"] .choices__input {
@@ -3407,7 +3494,7 @@ button {
 }
 
 .account-header .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-  background-color: #000;
+  background-color: #1f1e1e;
 }
 
 .account-header .choices__list--dropdown .choices__item--selectable:after {
@@ -3421,10 +3508,10 @@ button {
           transform: translateY(-50%);
 }
 
-.account-header .choices[data-type*="select-one"]:after {
+.account-header .choices[data-type*="select-one"]::after {
   content: "";
-  height: 0;
-  width: 0;
+  height: 15;
+  width: 15;
   border-style: solid;
   border-color: transparent;
   border-width: 5px;
@@ -3433,7 +3520,7 @@ button {
   background-position: center;
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 60%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-top: -2.5px;
@@ -3447,8 +3534,9 @@ button {
 }
 
 .account-header__bottom .person-form-btn {
-  margin-top: 30px;
+  margin-top: 20px;
   max-width: 600px;
+  margin-bottom: 80px;
 }
 
 .account-header__bottom .person-form-btn::after {
@@ -3525,18 +3613,18 @@ button {
   margin-bottom: 20px;
   color: #ffc899;
   font-size: 16px;
-  font-family: "Alice-Regular" sans-serif;
+  font-family: "Alice-Regular"sans-serif;
 }
 
 .donat-descr {
   color: #ffc899;
   margin-bottom: 35px;
-  font-family: "XO_Oriel_Nu" sans-serif;
+  font-family: "XO_Oriel_Nu"sans-serif;
   font-size: 16px;
 }
 
 .donat-link {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   position: relative;
   display: inline-block;
   border: 1px solid #594d57;
@@ -3553,6 +3641,12 @@ button {
 
 .donat-link:not(:last-child) {
   margin-right: 20px;
+}
+
+@media (max-width: 492px) {
+  .donat-link:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 .donat-link:hover {
@@ -3665,9 +3759,15 @@ button {
   margin-right: 25px;
 }
 
+@media (max-width: 1200px) {
+  .user-form__label.auction-label:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 430px) {
   .user-form__label.auction-label:nth-child(2) {
-    margin-right: 122px;
+    margin-right: 0;
   }
 }
 
@@ -3676,6 +3776,13 @@ button {
   margin-bottom: 5px;
   font-family: "Alice-Regular", sans-serif;
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .user-form__label.auction-label {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .opasity {
@@ -3693,6 +3800,15 @@ button {
   text-align: left;
   margin-top: -18px;
   margin-left: 12px;
+}
+
+@media (max-width: 1200px) {
+  .label-box {
+    margin-left: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    margin-right: 15px;
+  }
 }
 
 @media (max-width: 544px) {
@@ -3713,7 +3829,7 @@ button {
   padding: 15px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1200px) {
   .user-form__input.auction-input {
     max-width: 100%;
   }
@@ -3738,6 +3854,8 @@ button {
   font-size: 16px;
   max-width: 220px;
   margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1f1e1e;
 }
 
 @media (max-width: 1219px) {
@@ -3750,11 +3868,13 @@ button {
 .user-form__btn.btn-auction {
   width: 150px;
   margin: 0;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 @media (max-width: 1219px) {
   .user-form__btn.btn-auction {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -3773,10 +3893,10 @@ button {
 
 @media (max-width: 544px) {
   .user-form__btn.btn-auction {
-    margin-bottom: 20px;
+    margin-bottom: -10px;
     margin-top: 20px;
     margin-left: 0;
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -3796,7 +3916,9 @@ button {
 
 @media (max-width: 544px) {
   .user-form__btn.btn-lot {
-    width: 290px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -3822,6 +3944,7 @@ button {
   .select-auction {
     margin-top: 10px;
     font-size: 14px;
+    width: 100%;
   }
 }
 
@@ -3897,6 +4020,12 @@ label.user-form__label.auction-label.checkbox-auction {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .auction-wrapper {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 544px) {
@@ -4042,7 +4171,7 @@ label.user-form__label.auction-label.checkbox-auction {
 }
 
 .price-table__classtitle {
-  font-family: "Alice-Regular" sans-serif;
+  font-family: "Alice-Regular"sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   color: #fff;
@@ -4247,7 +4376,7 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("../images/auction.png");
+  background-image: url("../images/auction.png") !important;
 }
 
 .account-header {
@@ -4314,6 +4443,92 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
 @media (max-width: 1340px) {
   .user-account-auction .sidebar-buttons__btn {
     max-width: 100%;
+  }
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  label.user-form__label {
+    width: 100%;
+  }
+}
+
+input#password-input2 {
+  font-size: 16px;
+}
+
+input#password-input2::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+input#password-input2:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+input#password-input2::-ms-input-placeholder {
+  font-size: 16px;
+}
+
+input#password-input2::placeholder {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  input#password-input2 {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.account-header-shop .select-auction ~ .choices {
+  max-width: 100%;
+}
+
+.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
+  margin-right: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .choices[data-type*=select-one] .choices__inner {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .choices[data-type*="select-one"]:after {
+    top: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .site .user-account__balans {
+    padding: 11px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .site .user-account__balans-btn {
+    width: 50px;
+    height: 50px;
   }
 }
 
