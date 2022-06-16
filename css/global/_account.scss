@@ -123,6 +123,7 @@
   
   .user-account {
     border: 1px solid rgb(39, 30, 48);
+    box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
     border-radius: 25px;
 
 
@@ -604,7 +605,9 @@
       align-items: center;
     }
 
-
+    & .choices[data-type*="select-one"]::after{
+      top: 55%;
+    }
 
     .choices__inner {
       border: 1px solid rgb(89, 77, 87);
@@ -633,7 +636,12 @@
     .choices[data-type*="select-one"]:after {
       // top: 30px;
       width: 15px;
-      height: 15px;
+      height: 8px;
+      
+      
+    }
+    .choices__list--dropdown{
+      top: 50px;
     }
   }
 
@@ -1310,7 +1318,7 @@
 
   .choices[data-type*="select-one"]::after {
     content: "";
-    height: 15;
+    height: 8;
     width: 15;
     border-style: solid;
     border-color: transparent;
@@ -1320,7 +1328,7 @@
     background-position: center;
     position: absolute;
     right: 20px;
-    top: 55%;
+    top: 56%;
     transform: translateY(-50%);
     
     pointer-events: none;
@@ -1335,7 +1343,7 @@
 .account-header__bottom .person-form-btn {
   margin-top: 20px;
   max-width: 600px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 
   &::after {
     position: absolute;
@@ -1688,9 +1696,12 @@
   align-items: center;
 }
 
-.select-auction {
+.form-auction .select-auction {
   text-align: left;
   margin-top: -20px;
+  .user-form-shop .choices[data-type*="select-one"]::after {
+top: 50%;
+  }
 
   @include r(544) {
     margin-top: 10px;
@@ -2241,5 +2252,19 @@ input#password-input2 {
   @include r(500) {
     width: 50px;
     height: 50px;
+  }
+}
+
+
+.user-form.user-form-shop {
+
+  .choices[data-type*="select-one"]::after {
+top: 37%;
+  }
+}
+.user-form-shop.form-auction {
+
+  .choices[data-type*="select-one"]::after {
+top: 55%;
   }
 }
