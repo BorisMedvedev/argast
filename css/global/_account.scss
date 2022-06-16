@@ -128,6 +128,7 @@
 
 
     @include r(968) {
+      box-shadow: none;
       border: none;
     }
 
@@ -168,6 +169,7 @@
       border-top-left-radius: 25px;
 
       @include r(968) {
+        background-color: rgba(0, 0, 0, 0.8);
         border-top-right-radius: 25px;
         width: 100%;
       }
@@ -276,8 +278,9 @@
     }
 
     @include r(968) {
-      padding-bottom: 50px;
+      padding-bottom: 90px;
       border-bottom-right-radius: 25px;
+      background-color: rgba(31, 30, 30, 0.3);
     }
 
     &::before {
@@ -397,6 +400,7 @@
 
     &__top {
       display: flex;
+      min-height: 158px;
 
       @include r(968) {
         display: none;
@@ -434,7 +438,7 @@
     }
 
     &__info {
-      // margin-top: -3px;
+      min-height: 78px;
       padding: 20px 60px;
       background-color: rgba(255, 255, 255, 0.2);
 
@@ -481,7 +485,7 @@
 
     @include r(968) {
       border-bottom-left-radius: 25px;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     @include r(560) {
@@ -746,6 +750,7 @@
     padding: 16px;
     font-size: 16px;
     line-height: 21px;
+    
     background-color: rgba(0, 0, 0, 0.5);
     border-top-right-radius: 25px;
     font-family: "Alice-Regular", sans-serif;
@@ -1529,6 +1534,7 @@
 .account-header__top-img {
   max-width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .user-form__label.auction-label {
@@ -2190,6 +2196,7 @@ label.user-form__label {
 
 input#password-input2 {
   font-size: 16px;
+  margin-bottom: 20px;
 
   &::placeholder {
     font-size: 16px;
@@ -2266,5 +2273,12 @@ top: 37%;
 
   .choices[data-type*="select-one"]::after {
 top: 55%;
+  }
+}
+.user-form__input.input-shop.auction-input.auction-input-do{
+
+  @include r(1200) {
+   
+    margin-bottom: 25px;
   }
 }

@@ -2188,6 +2188,8 @@ button {
 
 @media (max-width: 968px) {
   .site .user-account {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border: none;
   }
 }
@@ -2247,6 +2249,7 @@ button {
 
 @media (max-width: 968px) {
   .site .user-account__sidebar-top {
+    background-color: rgba(0, 0, 0, 0.8);
     border-top-right-radius: 25px;
     width: 100%;
   }
@@ -2364,8 +2367,9 @@ button {
 
 @media (max-width: 968px) {
   .site .sidebar-buttons {
-    padding-bottom: 50px;
+    padding-bottom: 90px;
     border-bottom-right-radius: 25px;
+    background-color: rgba(31, 30, 30, 0.3);
   }
 }
 
@@ -2498,6 +2502,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 158px;
 }
 
 @media (max-width: 968px) {
@@ -2531,6 +2536,7 @@ button {
 }
 
 .site .account-header__info {
+  min-height: 78px;
   padding: 20px 60px;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -2581,7 +2587,7 @@ button {
 @media (max-width: 968px) {
   .site .account-form {
     border-bottom-left-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -3750,6 +3756,8 @@ button {
 .account-header__top-img {
   max-width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .user-form__label.auction-label {
@@ -4480,6 +4488,7 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
 
 input#password-input2 {
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 input#password-input2::-webkit-input-placeholder {
@@ -4563,6 +4572,12 @@ input#password-input2::placeholder {
 
 .user-form-shop.form-auction .choices[data-type*="select-one"]::after {
   top: 55%;
+}
+
+@media (max-width: 1200px) {
+  .user-form__input.input-shop.auction-input.auction-input-do {
+    margin-bottom: 25px;
+  }
 }
 
 /* CONTENT */
