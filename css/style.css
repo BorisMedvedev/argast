@@ -2420,7 +2420,7 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .site .sidebar-buttons__btn {
     max-width: 100%;
   }
@@ -2787,7 +2787,6 @@ button {
 }
 
 .site .user-form-shop .choices[data-type*="select-one"]:after {
-  top: 30px;
   width: 15px;
   height: 15px;
 }
@@ -3422,16 +3421,15 @@ button {
   width: 15px;
   border-style: solid;
   border-color: transparent;
-  border-width: 5px;
+  border-width: 0;
   background-image: url("../images/arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   right: 7px;
-  top: 46%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin-top: 0;
   pointer-events: none;
 }
 
@@ -3444,12 +3442,6 @@ button {
 .account-header .choices {
   margin: 0 auto;
   max-width: 600px;
-}
-
-@media (max-width: 1200px) {
-  .account-header .choices {
-    max-width: 100%;
-  }
 }
 
 .account-header .choices__inner {
@@ -3535,16 +3527,15 @@ button {
   width: 15;
   border-style: solid;
   border-color: transparent;
-  border-width: 5px;
+  border-width: 0;
   background-image: url("../images/arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   right: 20px;
-  top: 60%;
+  top: 55%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin-top: -2.5px;
   pointer-events: none;
 }
 
@@ -4542,6 +4533,7 @@ input#password-input2::placeholder {
 @media (max-width: 500px) {
   .choices[data-type*="select-one"]:after {
     top: 50%;
+    right: 16px;
   }
 }
 

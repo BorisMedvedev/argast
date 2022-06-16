@@ -323,7 +323,7 @@
         padding: 15px 22px 15px 60px;
       }
 
-      @include r(768) {
+      @include r(968) {
         max-width: 100%;
       }
 
@@ -631,7 +631,7 @@
     }
 
     .choices[data-type*="select-one"]:after {
-      top: 30px;
+      // top: 30px;
       width: 15px;
       height: 15px;
     }
@@ -1206,15 +1206,15 @@
   width: 15px;
   border-style: solid;
   border-color: transparent;
-  border-width: 5px;
+  border-width: 0;
   background-image: url("../images/arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   right: 7px;
-  top: 46%;
+  top: 50%;
   transform: translateY(-50%);
-  margin-top: 0;
+ 
   pointer-events: none;
 }
 
@@ -1229,7 +1229,7 @@
     max-width: 600px;
 
     @include r(1200) {
-      max-width: 100%;
+      // max-width: 100%;
     }
   }
 
@@ -1311,15 +1311,15 @@
     width: 15;
     border-style: solid;
     border-color: transparent;
-    border-width: 5px;
+    border-width: 0;
     background-image: url("../images/arrow.png");
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     right: 20px;
-    top: 60%;
+    top: 55%;
     transform: translateY(-50%);
-    margin-top: -2.5px;
+    
     pointer-events: none;
   }
 
@@ -2224,6 +2224,7 @@ input#password-input2 {
 .choices[data-type*="select-one"]:after {
   @include r(500) {
     top: 50%;
+    right: 16px;
   }
 }
 
