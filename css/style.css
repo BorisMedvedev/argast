@@ -3602,7 +3602,7 @@ button {
 
 .account-form__title::before {
   position: absolute;
-  bottom: -18px;
+  bottom: -13px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
