@@ -266,7 +266,7 @@
   .sidebar-buttons {
     position: relative;
     padding-bottom: 230px;
-    background-color: rgba(31, 30, 30, 0.6);
+    background-color: rgba(31, 30, 30, 0.5);
     border-bottom-left-radius: 25px;
     height: 100%;
 
@@ -1081,8 +1081,8 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url("../images/svg/view.svg") 0 0 no-repeat;
-  filter: invert(39%) sepia(9%) saturate(204%) hue-rotate(343deg) brightness(96%) contrast(86%);
+  // background: url("../images/svg/view.svg") 0 0 no-repeat;
+  // filter: invert(39%) sepia(9%) saturate(204%) hue-rotate(343deg) brightness(96%) contrast(86%);
 }
 
 // .password-control--bottom{
@@ -1096,7 +1096,7 @@
 // }
 
 .password-control.view {
-  background: url("../images/svg/no-view.svg") 0 0 no-repeat;
+  // background: url("../images/svg/no-view.svg") 0 0 no-repeat;
 }
 
 .user-form__btn {
