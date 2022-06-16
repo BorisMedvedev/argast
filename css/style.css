@@ -2882,7 +2882,7 @@ button {
   .site .input-shop {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 }
 
@@ -3899,8 +3899,8 @@ button {
 
 @media (max-width: 544px) {
   .user-form__btn.btn-auction {
-    margin-bottom: -10px;
-    margin-top: 20px;
+    margin-bottom: -5px;
+    margin-top: 21px;
     margin-left: 0;
     width: 100%;
   }
@@ -3924,7 +3924,7 @@ button {
 @media (max-width: 544px) {
   .user-form__btn.btn-lot {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     margin-top: 10px;
   }
 }

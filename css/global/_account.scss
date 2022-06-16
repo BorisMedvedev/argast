@@ -719,7 +719,10 @@
     @include r(1200) {
       width: 100%;
       max-width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
+      &:last-child{
+        
+      }
     }
   }
 
@@ -1648,8 +1651,8 @@
   }
 
   @include r(544) {
-    margin-bottom: -10px;
-    margin-top: 20px;
+    margin-bottom: -5px;
+    margin-top: 21px;
     margin-left: 0;
     width: 100%;
   }
@@ -1669,7 +1672,7 @@
 
   @include r(544) {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     margin-top: 10px;
   }
 }
