@@ -2451,12 +2451,21 @@ button {
   background-position: center;
   background-size: contain;
   background-image: url("../images/helmet.png");
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
 }
 
 @media (max-width: 968px) {
   .site .sidebar-buttons__btn::after {
     left: 15px;
   }
+}
+
+.site .sidebar-buttons .sidebar-buttons__btn:hover::after {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
 }
 
 .site .sidebar-buttons .sidebar-buttons__btn2::after {
@@ -2624,28 +2633,43 @@ button {
   background-color: rgba(39, 39, 39, 0.7);
   color: #fff;
   font-size: 16px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.site .user-form__input:focus {
+  background-color: rgba(39, 39, 39, 0.3);
+}
+
+.site .user-form__input:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #7e7a7d;
+}
+
+.site .user-form__input:active {
+  background-color: #6e6a6a;
 }
 
 .site .user-form__input::-webkit-input-placeholder {
-  color: #696562;
+  color: #7e7975;
   font-size: 16px;
   font-family: "Alice-Regular", sans-serif;
 }
 
 .site .user-form__input:-ms-input-placeholder {
-  color: #696562;
+  color: #7e7975;
   font-size: 16px;
   font-family: "Alice-Regular", sans-serif;
 }
 
 .site .user-form__input::-ms-input-placeholder {
-  color: #696562;
+  color: #7e7975;
   font-size: 16px;
   font-family: "Alice-Regular", sans-serif;
 }
 
 .site .user-form__input::placeholder {
-  color: #696562;
+  color: #7e7975;
   font-size: 16px;
   font-family: "Alice-Regular", sans-serif;
 }
@@ -3032,6 +3056,14 @@ button {
   border: 1px solid #7e7a7d;
 }
 
+.site .cart:hover .cart__title {
+  color: #fd9b38;
+}
+
+.site .cart:hover .cart__price {
+  color: #fff;
+}
+
 @media (max-width: 1340px) {
   .site .cart {
     max-width: 230px;
@@ -3056,6 +3088,8 @@ button {
 .site .cart__title {
   margin-bottom: 15px;
   font-size: 24px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 @media (max-width: 440px) {
@@ -3084,6 +3118,8 @@ button {
   margin-bottom: 15px;
   color: #fd9b38;
   font-size: 18px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 @media (max-width: 440px) {
@@ -3451,6 +3487,12 @@ button {
 .account-header .choices {
   margin: 0 auto;
   max-width: 600px;
+}
+
+@media (max-width: 1200px) {
+  .account-header .choices {
+    max-width: 100%;
+  }
 }
 
 .account-header .choices__inner {
@@ -4352,6 +4394,13 @@ label.user-form__label.auction-label.checkbox-auction {
   .price-table button.user-form__btn.btn-cart.btn-reset.price-table__btn--mb {
     font-size: 10px;
     width: 100px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .price-table button.user-form__btn.btn-cart.btn-reset.price-table__btn--mb {
+    font-size: 9px;
   }
 }
 
@@ -4372,6 +4421,12 @@ button.user-form__btn.btn-cart.btn-reset.price-table__btn--mb::after {
   width: 16px;
   height: 17px;
   right: 14px;
+}
+
+@media (max-width: 500px) {
+  button.user-form__btn.btn-cart.btn-reset.price-table__btn--mb::after {
+    right: 35px;
+  }
 }
 
 button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot1::after {
@@ -4568,6 +4623,12 @@ input#password-input2::placeholder {
 
 .user-form.user-form-shop .choices[data-type*="select-one"]::after {
   top: 37%;
+}
+
+@media (max-width: 1200px) {
+  .user-form.user-form-shop .choices[data-type*="select-one"]::after {
+    top: 50%;
+  }
 }
 
 .user-form-shop.form-auction .choices[data-type*="select-one"]::after {
