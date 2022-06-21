@@ -88,18 +88,30 @@ defaultSelect2();
 
 
 
+// Модальное окно
 
+// открыть по кнопке
+$('.js-button-campaign').click(function() { 
+	
+	$('.js-overlay-campaign').fadeIn();
+	$('.js-overlay-campaign').addClass('disabled');
+	$("body").css("overflow", "hidden");
+});
 
-// function show_hide_password(target){
-// 	var input = document.getElementById('password-input');
-// 	if (input.getAttribute('type') == 'password') {
-// 		target.classList.add('view');
-// 		input.setAttribute('type', 'text');
-// 	} else {
-// 		target.classList.remove('view');
-// 		input.setAttribute('type', 'password');
-// 	}
-// 	return false;
-// }
+// закрыть на крестик
+$('.js-close-campaign').click(function() { 
+	$('.js-overlay-campaign').fadeOut();
+		$("body").css("overflow", "visible");
+	
+});
 
+// закрыть по клику вне окна
+$(document).mouseup(function (e) { 
+	var popup = $('.js-popup-campaign');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.js-overlay-campaign').fadeOut();
+			$("body").css("overflow", "visible");
+		
+	}
+});
 

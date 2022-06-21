@@ -34,9 +34,8 @@
 }
 
 .site {
-
   button {
-    font-family: 'BeaufortforLOL-Bold', sans-serif;
+    font-family: "BeaufortforLOL-Bold", sans-serif;
   }
 
   .choices__item--choice {
@@ -120,12 +119,10 @@
     }
   }
 
-
   .user-account {
     border: 1px solid rgb(39, 30, 48);
     box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
     border-radius: 25px;
-
 
     @include r(968) {
       box-shadow: none;
@@ -177,9 +174,6 @@
       @include r(768) {
         width: 100%;
       }
-
-
-
 
       &::before {
         position: absolute;
@@ -233,8 +227,6 @@
         font-family: "BeaufortforLOL-Bold", sans-serif;
       }
 
-
-
       & span {
         display: inline-block;
         padding-left: 30px;
@@ -262,7 +254,6 @@
       &:hover {
         filter: brightness(120%);
       }
-
     }
   }
 
@@ -350,7 +341,6 @@
         background-size: contain;
         background-image: url("../images/helmet.png");
         transition: filter 0.3s;
-        
 
         @include r(968) {
           left: 15px;
@@ -358,7 +348,7 @@
       }
     }
 
-    .sidebar-buttons__btn:hover::after{
+    .sidebar-buttons__btn:hover::after {
       filter: brightness(10);
     }
 
@@ -414,15 +404,19 @@
     }
 
     &__top-item {
-      @include r(1340) {}
+      @include r(1340) {
+      }
 
-      @include r(968) {}
+      @include r(968) {
+      }
     }
 
     &__top-img {
-      @include r(1340) {}
+      @include r(1340) {
+      }
 
-      @include r(968) {}
+      @include r(968) {
+      }
     }
 
     &__top-title {
@@ -478,7 +472,7 @@
     }
   }
 
-  .account-header__top-img-link:hover+.account-header__top-title::before {
+  .account-header__top-img-link:hover + .account-header__top-title::before {
     width: 150px;
   }
 
@@ -511,7 +505,6 @@
     }
   }
 
-
   .user-form {
     max-width: 600px;
     width: 100%;
@@ -534,7 +527,7 @@
         background-color: rgba(255, 255, 255, 0.2);
         border: 1px solid #7e7a7d;
       }
-      
+
       &:active {
         background-color: rgba(110, 106, 106, 1);
       }
@@ -661,8 +654,6 @@
       // top: 30px;
       width: 15px;
       height: 8px;
-
-
     }
 
     .choices__list--dropdown {
@@ -746,7 +737,6 @@
       }
 
       width: 300px;
-
     }
 
     @include r(1200) {
@@ -754,7 +744,8 @@
       max-width: 100%;
       margin-bottom: 5px;
 
-      &:last-child {}
+      &:last-child {
+      }
     }
   }
 
@@ -828,13 +819,13 @@
   }
 
   .card-shop {
-
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include r(1340) {}
+    @include r(1340) {
+    }
 
     @include r(968) {
       max-width: 100%;
@@ -870,7 +861,7 @@
       background-color: rgba(255, 255, 255, 0.2);
       border: 1px solid rgb(126, 122, 125);
     }
-    
+
     &:hover .cart__title {
       color: #fd9b38;
     }
@@ -1336,7 +1327,6 @@
   }
 
   .choices__item.choices__item--choice.choices__placeholder.choices__item--selectable.is-highlighted {
-
     background-color: rgb(31, 30, 30);
   }
 
@@ -1448,13 +1438,13 @@
   margin-bottom: 20px;
   color: #ffc899;
   font-size: 16px;
-  font-family: "Alice-Regular"sans-serif;
+  font-family: "Alice-Regular" sans-serif;
 }
 
 .donat-descr {
   color: #ffc899;
   margin-bottom: 35px;
-  font-family: "XO_Oriel_Nu"sans-serif;
+  font-family: "XO_Oriel_Nu" sans-serif;
   font-size: 16px;
 }
 
@@ -1637,9 +1627,6 @@
   }
 }
 
-
-
-
 .user-form__input.auction-input {
   max-width: 80px;
   padding: 15px;
@@ -1657,7 +1644,7 @@
   max-width: 25px;
 }
 
-.site .form-auction+.choices {
+.site .form-auction + .choices {
   margin-right: 0;
 }
 
@@ -1789,7 +1776,7 @@
   }
 }
 
-.checkbox-input-radio:checked+.radio-castom::before {
+.checkbox-input-radio:checked + .radio-castom::before {
   opacity: 1;
 }
 
@@ -1881,7 +1868,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 70px;
-
     }
 
     &::before {
@@ -1897,7 +1883,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
       @include r(500) {
         display: none;
-
       }
     }
   }
@@ -1932,14 +1917,13 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 50px;
-
     }
   }
 
   // .price-table__classtitle
 
   &__classtitle {
-    font-family: "Alice-Regular"sans-serif;
+    font-family: "Alice-Regular" sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
@@ -1961,7 +1945,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 40px;
-
     }
   }
 
@@ -1993,7 +1976,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 40px;
-
     }
   }
 
@@ -2025,7 +2007,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 100px;
-
     }
   }
 
@@ -2057,7 +2038,6 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(500) {
       max-width: 70px;
-
     }
   }
 
@@ -2092,13 +2072,13 @@ label.user-form__label.auction-label.checkbox-auction {
 
     @include r(375) {
       font-size: 9px;
-
     }
   }
 
   // .price-table__btntitle
 
-  &__btntitle {}
+  &__btntitle {
+  }
 }
 
 .user-form__btn.price-table__btn--mb {
@@ -2219,18 +2199,14 @@ button.user-form__btn.btn-shop.btn-reset.btn-auction.btn-lot2::after {
   }
 }
 
-
-.choices[data-type*=select-one] .choices__inner {
+.choices[data-type*="select-one"] .choices__inner {
   padding-bottom: 0;
   outline: none;
 }
 
-
 label.user-form__label {
-
   @include r(1200) {
     width: 100%;
-
   }
 }
 
@@ -2248,33 +2224,27 @@ input#password-input2 {
   }
 }
 
-
-.account-header-shop .select-auction~.choices {
+.account-header-shop .select-auction ~ .choices {
   max-width: 100%;
 }
 
-.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
+.account-header-shop .select-auction .choices[data-type*="select-one"] .choices__inner {
   @include r(500) {
     margin-right: 0;
     max-width: 100%;
     width: 100%;
   }
-
 }
 
-
-.account-header-shop .select-auction .choices[data-type*=select-one] .choices__inner {
-
+.account-header-shop .select-auction .choices[data-type*="select-one"] .choices__inner {
   @include r(500) {
     margin-right: 0;
     max-width: 100%;
     width: 100%;
   }
-
 }
 
-
-.choices[data-type*=select-one] .choices__inner {
+.choices[data-type*="select-one"] .choices__inner {
   @include r(500) {
     height: 50px;
     display: flex;
@@ -2302,30 +2272,98 @@ input#password-input2 {
   }
 }
 
-
 .user-form.user-form-shop {
-
   .choices[data-type*="select-one"]::after {
     top: 37%;
 
     @include r(1200) {
-
       top: 50%;
     }
   }
 }
 
 .user-form-shop.form-auction {
-
   .choices[data-type*="select-one"]::after {
     top: 55%;
   }
 }
 
 .user-form__input.input-shop.auction-input.auction-input-do {
-
   @include r(1200) {
-
     margin-bottom: 25px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 800;
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 690px;
+  width: 100%;
+  padding: 70px 0 50px;
+  background-color: #000;
+  border: 1px solid #271e30;
+  border: 1px solid rgb(39, 30, 48);
+  box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
+  z-index: 999;
+  @include r(560) {
+    width: 95%;
+  }
+}
+
+.popup__title {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #ffc899;
+  font-weight: 400;
+  font-family: "Alice";
+  text-align: center;
+  @include r(560) {
+    font-size: 24px;
+  }
+}
+
+.popup__descr {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Alice", sans-serif;
+  text-align: center;
+  @include r(560) {
+    font-size: 18px;
+  }
+}
+
+.close-popup {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  background-image: url("../images/btn.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Alice", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  filter: brightness(80%);
+  cursor: pointer;
+  transition: filter 0.3s;
+  &:hover{
+    filter: brightness(150%);
   }
 }
