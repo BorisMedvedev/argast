@@ -4649,7 +4649,7 @@ input#password-input2::placeholder {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: block;
+  display: none;
   z-index: 800;
 }
 
@@ -4683,12 +4683,72 @@ input#password-input2::placeholder {
 
 .popup-2 {
   padding: 13px 50px;
-  max-width: 640px;
+  max-width: 690px;
 }
 
 .popup-4 {
   padding: 40px 25px 50px;
   max-width: 690px;
+}
+
+.popup-5 {
+  max-width: 970px;
+}
+
+.popup-6 {
+  max-width: 600px;
+}
+
+.popup-6 a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffc899;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.popup-6 a:hover {
+  color: red;
+}
+
+.popup-7 {
+  padding: 70px 43px 50px;
+}
+
+.popup-7 .popup-input {
+  padding: 8px 41px;
+}
+
+.popup-7 .popup-input::-webkit-input-placeholder {
+  color: #fd9b38;
+}
+
+.popup-7 .popup-input:-ms-input-placeholder {
+  color: #fd9b38;
+}
+
+.popup-7 .popup-input::-ms-input-placeholder {
+  color: #fd9b38;
+}
+
+.popup-7 .popup-input::placeholder {
+  color: #fd9b38;
+}
+
+.popup-7 .popup__descr-buy {
+  font-size: 16px;
+}
+
+.popup-7 a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffc899;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.popup-7 a:hover {
+  color: red;
 }
 
 .user-form__btn.btn-cart.btn-cart-popup {
@@ -4806,6 +4866,8 @@ input#password-input2::placeholder {
   left: -4px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .close-popup:after {
@@ -4818,6 +4880,16 @@ input#password-input2::placeholder {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: -4px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.close-popup:hover::before {
+  background-color: #ffffff;
+}
+
+.close-popup:hover::after {
+  background-color: #ffffff;
 }
 
 .popup__title-buy,
@@ -4858,7 +4930,7 @@ input#password-input2::placeholder {
 .user-form__input.popup-input {
   padding: 10px 10px;
   margin-bottom: 25px;
-  font-size: 36px;
+  font-size: 18px;
   max-width: 160px;
 }
 
