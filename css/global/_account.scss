@@ -2450,11 +2450,12 @@ input#password-input2 {
 
 .close-popup {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 29px;
+  right: 29px;
   width: 23px;
   height: 23px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .close-popup:before {
