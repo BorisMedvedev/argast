@@ -2337,7 +2337,7 @@ input#password-input2 {
   max-width: 690px;
 }
 
-.popup-5{
+.popup-5 {
   max-width: 970px;
 }
 
@@ -2355,13 +2355,13 @@ input#password-input2 {
 }
 .popup-7 {
   padding: 70px 43px 50px;
-  .popup-input{
+  .popup-input {
     padding: 8px 41px;
-    &::placeholder{
+    &::placeholder {
       color: #fd9b38;
     }
   }
-  .popup__descr-buy{
+  .popup__descr-buy {
     font-size: 16px;
   }
 }
@@ -2387,7 +2387,7 @@ input#password-input2 {
   font-size: 32px;
   color: #ffc899;
   font-weight: 400;
-  font-family: "Alice";
+  font-family: "Alice", sans-serif;
   text-align: center;
   @include r(560) {
     max-width: 330px;
@@ -2481,10 +2481,10 @@ input#password-input2 {
   transition: background-color 0.3s;
 }
 
-.close-popup:hover::before{
+.close-popup:hover::before {
   background-color: #ffffff;
 }
-.close-popup:hover::after{
+.close-popup:hover::after {
   background-color: #ffffff;
 }
 
@@ -2541,7 +2541,6 @@ input#password-input2 {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 20px;
   background-color: rgba(39, 39, 39, 0.9);
-  
 }
 
 .popup__title-auction {
@@ -2556,7 +2555,6 @@ input#password-input2 {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../images/robot.png");
-  
 }
 
 .popup-content {
@@ -2594,7 +2592,7 @@ input#password-input2 {
     background-size: cover;
     filter: brightness(90%);
     transition: filter 0.3s;
-    &:hover{
+    &:hover {
       filter: brightness(150%);
     }
   }
@@ -2702,7 +2700,7 @@ input#password-input2 {
   filter: brightness(80%);
   border-radius: 5px;
   transition: filter 0.3s, box-shadow 0.3s;
-  &:hover{
+  &:hover {
     box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.3);
     filter: brightness(150%);
   }
