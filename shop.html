@@ -184,7 +184,7 @@
                     свяжитесь с нами напрямую через Discord или по электронной
                     почте.<br />
                     * Чтобы пополнить свой счет и купить Asgard-Coins, <a class="shop3-link" href="#">нажмите
-                      здесь</a>. <br />* Помните, что все покупки окончательные, 
+                      здесь</a>. <br />* Помните, что все покупки окончательные,
                     <span class="shop4">возврату и обмену не подлежат</span>. Дважды проверяйте ваше
                     действия перед покупкой.
                   </p>
@@ -204,8 +204,7 @@
                             <option value="">Реалм: WotLK</option>
                           </select>
                           <label class="user-form__label" for="">
-                            <input id="password-input2" class="user-form__input input-shop" type="text" name="password"
-                              placeholder="Введите название предмета" />
+                            <input id="password-input2" class="user-form__input input-shop" type="text" name="password" placeholder="Введите название предмета" />
                           </label>
                           <button class="user-form__btn btn-shop btn-reset" type="submit">
                             ПОИСК
@@ -401,23 +400,34 @@
         </div>
       </footer>
     </div>
-        <!-- ==============================================modal-1============================== -->
-    <div class="overlay js-overlay-campaign">
-      <div class="popup js-popup-campaign">
+    <!-- ==============================================modal-1============================== -->
+    <!-- <div class="overlay js-overlay-campaign">
+      <div class="popup popup-0 js-popup-campaign">
         <div class="popup__title">Покупка успешно завершена</div>
         <div class="popup__descr"> Проверьте внутриигровую почту</div>
-        <button class="close-popup js-close-campaign btn-reset">OK</button>
+        <button class="button-popup js-close-campaign btn-reset">OK</button>
       </div>
-    </div>
+    </div>  -->
 
     <!-- ==============================================modal-2============================== -->
+    <!-- <div class="overlay js-overlay-campaign">
+      <div class="popup popup-1 js-popup-campaign">
+        <div class="popup__title">Ошибка! Покупка не завершена</div>
+        <div class="popup__descr"> На аккаунте недостаточно бонусов</div>
+        <button class="button-popup js-close-campaign btn-reset">OK</button>
+      </div>
+    </div>  -->
+
+    <!-- ==============================================modal-3============================== -->
 
     <!-- <div class="overlay js-overlay-campaign">
       <div class="popup popup-2 js-popup-campaign">
+        <div class="close-popup js-close-campaign"></div>
+        <div class="popup__title popup__title-table"><span>Выберите персонажа на реалме</span> Кузня Крови х1</div>
         <div class="table-inner">
 
           <ul id="myElement" class="price-table list-reset">
-            <li class="price-table__item">
+            <li class="price-table__item price-table__item-popup">
               <div class="price-table__nickname price-table__nicknametitle">
                 НИКНЕЙМ
               </div>
@@ -430,7 +440,7 @@
               <div class="price-table__level price-table__leveltitle">
                 УРОВЕНЬ
               </div>
-             
+
               <div class="price-table__btn price-table__btntitle"></div>
             </li>
             <li class="price-table__item">
@@ -442,9 +452,9 @@
                 <img src="./images/table-img2.png" alt="" />
               </div>
               <div class="price-table__level">76</div>
-                     <div class="price-table__btn">
-                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb" type="submit">
-                  купить
+              <div class="price-table__btn">
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
                 </button>
               </div>
             </li>
@@ -457,10 +467,10 @@
                 <img src="./images/table-img2.png" alt="" />
               </div>
               <div class="price-table__level">76</div>
-            
+
               <div class="price-table__btn">
-                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb" type="submit">
-                  купить
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
                 </button>
               </div>
             </li>
@@ -473,10 +483,10 @@
                 <img src="./images/table-img2.png" alt="" />
               </div>
               <div class="price-table__level">76</div>
-           
+
               <div class="price-table__btn">
-                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb" type="submit">
-                  купить
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
                 </button>
               </div>
             </li>
@@ -489,10 +499,10 @@
                 <img src="./images/table-img2.png" alt="" />
               </div>
               <div class="price-table__level">76</div>
-            
+
               <div class="price-table__btn">
-                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb" type="submit">
-                  купить
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
                 </button>
               </div>
             </li>
@@ -505,21 +515,86 @@
                 <img src="./images/table-img2.png" alt="" />
               </div>
               <div class="price-table__level">76</div>
-            
+
               <div class="price-table__btn">
-                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb" type="submit">
-                  купить
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
                 </button>
               </div>
             </li>
-          
+            <li class="price-table__item">
+              <a class="price-table__nickname" href="#">Zalupoen</a>
+              <div class="price-table__class">
+                <img src="./images/table-img.png" alt="" />
+              </div>
+              <div class="price-table__rasa">
+                <img src="./images/table-img2.png" alt="" />
+              </div>
+              <div class="price-table__level">76</div>
+
+              <div class="price-table__btn">
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
+                </button>
+              </div>
+            </li>
+            <li class="price-table__item">
+              <a class="price-table__nickname" href="#">Zalupoen</a>
+              <div class="price-table__class">
+                <img src="./images/table-img.png" alt="" />
+              </div>
+              <div class="price-table__rasa">
+                <img src="./images/table-img2.png" alt="" />
+              </div>
+              <div class="price-table__level">76</div>
+
+              <div class="price-table__btn">
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
+                </button>
+              </div>
+            </li>
+            <li class="price-table__item">
+              <a class="price-table__nickname" href="#">Zalupoen</a>
+              <div class="price-table__class">
+                <img src="./images/table-img.png" alt="" />
+              </div>
+              <div class="price-table__rasa">
+                <img src="./images/table-img2.png" alt="" />
+              </div>
+              <div class="price-table__level">76</div>
+
+              <div class="price-table__btn">
+                <button class="user-form__btn btn-cart btn-reset price-table__btn--mb btn-cart-popup" type="submit">
+                  продолжить
+                </button>
+              </div>
+            </li>
+
           </ul>
 
         </div>
-        
+
       </div>
     </div> -->
 
+    <!-- ==============================================modal-4============================== -->
+    <div class="overlay js-overlay-campaign">
+      <div class="popup popup-4 js-popup-campaign">
+        <div class="close-popup"></div>
+        <div class="popup__title popup__title-buy">Покупка: <a href="#">Gressil, Dawn of Ruin</a> </div>
+        <div class="popup__descr popup__descr-buy"> Персонаж: <a href="#">Zalupoen</a></div>
+        <div class="popup__descr popup__descr-buy">Количество:</div>
+        <form class="user-form form-popup">
+          <label class="user-form__label popup-label" for="">
+            <input class="user-form__input popup-input" type="text" name="text" placeholder="1" />
+          </label>
+          <button class="user-form__btn btn-reset popup-btn-buy" type="submit">
+            КУПИТЬ ЗА 5000 A-COIN
+          </button>
+        </form>
+      </div>
+    </div>
 
 
   </div>

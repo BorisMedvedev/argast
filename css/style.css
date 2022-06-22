@@ -4648,8 +4648,8 @@ input#password-input2::placeholder {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
   z-index: 800;
 }
 
@@ -4661,19 +4661,42 @@ input#password-input2::placeholder {
           transform: translate(-50%, -50%);
   max-width: 690px;
   width: 100%;
-  padding: 70px 0 50px;
+  padding: 70px 25px 50px;
   background-color: #000;
   border: 1px solid #271e30;
   border: 1px solid #271e30;
   -webkit-box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
           box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
   z-index: 999;
+  overflow: hidden;
 }
 
 @media (max-width: 560px) {
   .popup {
     width: 95%;
   }
+}
+
+.popup .price-table__nickname::before {
+  display: none;
+}
+
+.popup-2 {
+  padding: 13px 50px;
+  max-width: 640px;
+}
+
+.popup-4 {
+  padding: 40px 25px 50px;
+  max-width: 690px;
+}
+
+.user-form__btn.btn-cart.btn-cart-popup {
+  width: 160px;
+}
+
+.site .user-form__btn.btn-cart.btn-cart-popup.price-table__btn--mb::after {
+  right: 10px;
 }
 
 .popup__title {
@@ -4687,8 +4710,40 @@ input#password-input2::placeholder {
 
 @media (max-width: 560px) {
   .popup__title {
+    max-width: 330px;
     font-size: 24px;
   }
+}
+
+@media (max-width: 440px) {
+  .popup__title {
+    max-width: 250px;
+    font-size: 16px;
+  }
+}
+
+.popup__title-table {
+  font-size: 24px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+@media (max-width: 560px) {
+  .popup__title-table {
+    max-width: 330px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .popup__title-table {
+    max-width: 250px;
+    font-size: 16px;
+  }
+}
+
+.popup__title-table span {
+  color: #fff;
 }
 
 .popup__descr {
@@ -4706,7 +4761,7 @@ input#password-input2::placeholder {
   }
 }
 
-.close-popup {
+.button-popup {
   display: block;
   margin: 0 auto;
   width: 200px;
@@ -4715,7 +4770,7 @@ input#password-input2::placeholder {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: "Alice", sans-serif;
+  font-family: "BeaufortforLOL-Bold", sans-serif;
   font-size: 20px;
   color: #ffffff;
   -webkit-filter: brightness(80%);
@@ -4727,7 +4782,344 @@ input#password-input2::placeholder {
   transition: filter 0.3s, -webkit-filter 0.3s;
 }
 
-.close-popup:hover {
+.button-popup:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.close-popup:before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  height: 3px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  content: "";
+  background-color: red;
+  position: absolute;
+  height: 3px;
+  width: 31px;
+  top: 11px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -4px;
+}
+
+.popup__title-buy,
+.popup__descr-buy {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.popup__descr-buy {
+  margin-bottom: 50px;
+}
+
+.popup-4 a {
+  text-decoration: underline;
+  font-size: 22px;
+  color: #ffc899;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.popup-4 a:hover {
+  color: red;
+}
+
+.form-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.user-form__input.popup-input {
+  padding: 10px 10px;
+  margin-bottom: 25px;
+  font-size: 36px;
+  max-width: 160px;
+}
+
+@media (max-width: 1200px) {
+  .user-form__input.popup-input {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.user-form__input.popup-input::-webkit-input-placeholder {
+  font-size: 36px;
+}
+
+.user-form__input.popup-input:-ms-input-placeholder {
+  font-size: 36px;
+}
+
+.user-form__input.popup-input::-ms-input-placeholder {
+  font-size: 36px;
+}
+
+.user-form__input.popup-input::placeholder {
+  font-size: 36px;
+}
+
+.popup-btn-buy {
+  max-width: 300px;
+}
+
+.user-form__btn.popup-btn-buy::after {
+  display: none;
+}
+
+.popup-auction-3 {
+  max-width: 610px;
+  padding: 30px 20px 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgba(39, 39, 39, 0.9);
+}
+
+.popup__title-auction {
+  font-size: 20px;
+  font-family: "BeaufortforLOL-Bold", sans-serif;
+  color: #fff;
+}
+
+.popup-wrapper {
+  width: 100%;
+  border: 1px solid rgba(209, 176, 133, 0.2);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/robot.png");
+}
+
+.popup-content {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.popup-content__item {
+  width: 100%;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-content__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-content__box-left {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-content__box-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-content__btn {
+  width: 315px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/hp-btn.png");
+  background-size: cover;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.popup-content__btn:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+.popup-content__btn--bg {
+  margin-top: 5px;
+  background-image: url("../images/rage.png");
+}
+
+.popup-content__box-img {
+  margin-bottom: 5px;
+}
+
+.popup-wrapper {
+  position: relative;
+  max-width: 560px;
+}
+
+.price-box {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.price-box__num {
+  position: relative;
+  margin-right: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #726351;
+  border-radius: 5px;
+}
+
+.price-box__num::before {
+  position: absolute;
+  left: 57px;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #726351;
+  z-index: 99;
+}
+
+.price-box__num-left {
+  padding: 0 5px;
+  margin-right: 8px;
+  width: 50px;
+  font-size: 16px;
+  font-family: "Alice", sans-serif;
+}
+
+.price-box__num-right {
+  width: 200px;
+  font-size: 24px;
+  font-family: "BeaufortforLOL-Bold", sans-serif;
+  color: #fd9b38;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.center-box {
+  max-width: 375px;
+  width: 100%;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.center-box__top {
+  max-width: 210px;
+  margin-bottom: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.center-box__bottom {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #726351;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.center-box__bottom-left {
+  border-right: 1px solid #726351;
+  width: 50%;
+}
+
+.center-box__bottom-right {
+  font-family: "XO_Oriel_Nu", sans-serif;
+  padding-left: 9px;
+  width: 50%;
+}
+
+.center-box__bottom span {
+  font-family: "XO_Oriel_Nu" sans-serif;
+  color: #fd9b38;
+}
+
+.btn-popup-img {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  border-radius: 5px;
+  -webkit-transition: -webkit-filter 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-filter 0.3s, -webkit-box-shadow 0.3s;
+  transition: filter 0.3s, box-shadow 0.3s;
+  transition: filter 0.3s, box-shadow 0.3s, -webkit-filter 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.btn-popup-img:hover {
+  -webkit-box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.3);
+          box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.3);
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
 }
