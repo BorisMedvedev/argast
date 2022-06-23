@@ -634,7 +634,7 @@
 
     <!-- =======================popup-1========================== -->
 
-    <!-- <div class="overlay js-overlay-campaign">
+    <!-- <div class="overlay js-overlay-campaign"> 
       <div class="popup popup-6 js-popup-campaign">
         <div class="close-popup js-close-campaign"></div>
         <div class="popup__title popup__title-buy">
@@ -645,7 +645,7 @@
           СНЯТЬ С ПРОДАЖИ
         </button>
       </div>
-    </div> -->
+    </div>   -->
     <!-- =======================popup-2========================== -->
 
     <!-- <div class="overlay js-overlay-campaign">
@@ -872,10 +872,10 @@
         </div>
 
       </div>
-    </div> -->
+    </div>   -->
 
     <!-- =======================popup-3========================== -->
-    <div class="overlay js-overlay-campaign">
+    <!-- <div class="overlay js-overlay-campaign">
       <div class="popup popup-auction-3 js-popup-campaign">
         <div class="close-popup js-close-campaign"></div>
         <div class="popup__title popup__title-auction">Zalupoen</div>
@@ -1012,7 +1012,7 @@
 
         </div>
       </div>
-    </div> 
+    </div>  -->
 
     <!-- =======================popup-4========================== -->
 
@@ -1023,21 +1023,55 @@
           Купить персонажа: <a href="#">Zalupoen</a>
         </div>
         <div class="popup__descr popup__descr-buy">
-          Реалм: Кузня Крови х1 Уровень: 76 Фракция: Орда Расса: Орк Класс:
-          Воин Время в игре: 3d 0h 37m 26s Цена: 1980 монет Цена персонажа
-          1800 монет + 10% комиссии, конечная цена персонажа составляет 1980
-          монет
+          Реалм: <span>Кузня Крови х1</span><br> Уровень: <span> 76</span> <br> Фракция: <span>Орда</span> <br>Расса: <span>Орк</span><br> Класс:
+          <span>Воин</span> <br>Время в игре: <span>3d 0h 37m 26s</span><br> Цена: <span>1980 монет</span><br> 
+          <div class="popup__descr-buy--mt">Цена персонажа
+            <span>1800 монет + 10%</span> комиссии, конечная цена персонажа составляет <span>1980
+              монет</span></div>
         </div>
         <form class="user-form form-popup">
           <label class="user-form__label popup-label" for="">
-            <input class="user-form__input popup-input" type="text" name="text" placeholder="1980" />
+            <input class="user-form__input popup-input" type="text" name="text" placeholder="1980" disabled  />
           </label>
           <button class="user-form__btn btn-reset popup-btn-buy" type="submit">
             КУПИТЬ ПЕРСОНАЖА
           </button>
         </form>
       </div>
-    </div> -->
+    </div>  -->
+
+    <!-- ========================================================================= -->
+
+    <div class="overlay js-overlay-campaign">
+      <div class="popup popup-8 js-popup-campaign">
+        <div class="close-popup js-close-campaign"></div>
+        <div class="popup__descr popup__title-buy">
+        Продать персонажа: <a href="#">Zalupoen</a>
+        </div>
+        <div class="popup__descr popup__descr-buy">
+          Нельзя продать персонажа со временем игры <span>менее 6 дней</span><br>
+          Минимальный уровень для продажи персонажа = <span>19</span><br>
+          Минимальная цена масштабируется: <span>15 монет за каждый уровень</span><br>
+          Например:<br>
+          Для <span>19 уровня</span> минимальная цена: <span>19*15</span> = <span>285 монет</span><br>
+          Для <span>60 уровня</span> минимальная цена: <span>60*15</span> = <span>900 монет</span><br>
+          Взимается комиссия = <span>10%</span><br>
+          Например:<br>
+          При цене <span>1000</span> будет списано <span>1100</span> автоматически
+          
+         
+          <div class="popup__descr-buy--mt"> Стоимость, бонусов (не более 10 000)</div>
+        </div>
+        <form class="user-form form-popup">
+          <label class="user-form__label popup-label" for="">
+            <input class="user-form__input popup-input" type="text" name="text" placeholder="8700" disabled  />
+          </label>
+          <button class="user-form__btn btn-reset popup-btn-buy" type="submit">
+            ВЫСТАВИТЬ НА ПРОДАЖУ
+          </button>
+        </form>
+      </div>
+    </div> 
     
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

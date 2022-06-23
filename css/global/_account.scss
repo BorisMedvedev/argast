@@ -2313,7 +2313,7 @@ input#password-input2 {
   transform: translate(-50%, -50%);
   max-width: 690px;
   width: 100%;
-  padding: 70px 25px 50px;
+  padding: 15px 25px 50px;
   background-color: #000;
   border: 1px solid #271e30;
   border: 1px solid rgb(39, 30, 48);
@@ -2348,7 +2348,7 @@ input#password-input2 {
 .popup-6 a {
   text-decoration: none;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
   transition: color 0.3s;
   &:hover {
     color: rgb(255, 0, 0);
@@ -2365,11 +2365,51 @@ input#password-input2 {
   .popup__descr-buy {
     font-size: 16px;
   }
+
+  .popup__descr-buy--mt {
+    margin-top: 50px;
+  }
+
+  .popup__descr-buy span{
+    color: #fd9b38;
+  }
 }
 .popup-7 a {
   text-decoration: none;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
+  transition: color 0.3s;
+  &:hover {
+    color: rgb(255, 0, 0);
+  }
+}
+
+.popup-8 {
+  max-width: 600px;
+  padding: 15px;
+  .popup-input {
+    padding: 8px 30px;
+    &::placeholder {
+      font-family: 'XO_Oriel_Nu', sans-serif;
+      color: #696562;
+    }
+  }
+  .popup__descr-buy {
+    font-size: 16px;
+  }
+
+  .popup__descr-buy--mt {
+    margin-top: 50px;
+  }
+
+  .popup__descr-buy span{
+    color: #fd9b38;
+  }
+}
+.popup-8 a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #fd9b38;
   transition: color 0.3s;
   &:hover {
     color: rgb(255, 0, 0);
@@ -2451,7 +2491,7 @@ input#password-input2 {
 
 .close-popup {
   position: absolute;
-  top: 29px;
+  top: 17px;
   right: 29px;
   width: 23px;
   height: 23px;
@@ -2499,12 +2539,12 @@ input#password-input2 {
 }
 
 .popup__descr-buy {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .popup-4 a {
   text-decoration: underline;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
   transition: color 0.3s;
   &:hover {
     color: rgb(255, 0, 0);
@@ -2517,10 +2557,11 @@ input#password-input2 {
   flex-wrap: wrap;
 }
 .user-form__input.popup-input {
-  padding: 10px 10px;
+  padding-top: 15px;
   margin-bottom: 25px;
   font-size: 18px;
   max-width: 160px;
+  pointer-events: none;
   @include r(1200) {
     max-width: 300px;
     width: 100%;

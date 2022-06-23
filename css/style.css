@@ -4661,7 +4661,7 @@ input#password-input2::placeholder {
           transform: translate(-50%, -50%);
   max-width: 690px;
   width: 100%;
-  padding: 70px 25px 50px;
+  padding: 15px 25px 50px;
   background-color: #000;
   border: 1px solid #271e30;
   border: 1px solid #271e30;
@@ -4702,7 +4702,7 @@ input#password-input2::placeholder {
 .popup-6 a {
   text-decoration: none;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -4739,15 +4739,76 @@ input#password-input2::placeholder {
   font-size: 16px;
 }
 
+.popup-7 .popup__descr-buy--mt {
+  margin-top: 50px;
+}
+
+.popup-7 .popup__descr-buy span {
+  color: #fd9b38;
+}
+
 .popup-7 a {
   text-decoration: none;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .popup-7 a:hover {
+  color: red;
+}
+
+.popup-8 {
+  max-width: 600px;
+  padding: 15px;
+}
+
+.popup-8 .popup-input {
+  padding: 8px 30px;
+}
+
+.popup-8 .popup-input::-webkit-input-placeholder {
+  font-family: 'XO_Oriel_Nu', sans-serif;
+  color: #696562;
+}
+
+.popup-8 .popup-input:-ms-input-placeholder {
+  font-family: 'XO_Oriel_Nu', sans-serif;
+  color: #696562;
+}
+
+.popup-8 .popup-input::-ms-input-placeholder {
+  font-family: 'XO_Oriel_Nu', sans-serif;
+  color: #696562;
+}
+
+.popup-8 .popup-input::placeholder {
+  font-family: 'XO_Oriel_Nu', sans-serif;
+  color: #696562;
+}
+
+.popup-8 .popup__descr-buy {
+  font-size: 16px;
+}
+
+.popup-8 .popup__descr-buy--mt {
+  margin-top: 50px;
+}
+
+.popup-8 .popup__descr-buy span {
+  color: #fd9b38;
+}
+
+.popup-8 a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #fd9b38;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.popup-8 a:hover {
   color: red;
 }
 
@@ -4849,7 +4910,7 @@ input#password-input2::placeholder {
 
 .close-popup {
   position: absolute;
-  top: 29px;
+  top: 17px;
   right: 29px;
   width: 23px;
   height: 23px;
@@ -4902,13 +4963,13 @@ input#password-input2::placeholder {
 }
 
 .popup__descr-buy {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .popup-4 a {
   text-decoration: underline;
   font-size: 22px;
-  color: #ffc899;
+  color: #fd9b38;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -4929,10 +4990,11 @@ input#password-input2::placeholder {
 }
 
 .user-form__input.popup-input {
-  padding: 10px 10px;
+  padding-top: 15px;
   margin-bottom: 25px;
   font-size: 18px;
   max-width: 160px;
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
