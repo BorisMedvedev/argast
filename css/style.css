@@ -4687,7 +4687,7 @@ input#password-input2::placeholder {
 }
 
 .popup-4 {
-  padding: 40px 25px 50px;
+  padding: 40px 43px 50px;
   max-width: 690px;
 }
 
@@ -4990,7 +4990,7 @@ input#password-input2::placeholder {
 }
 
 .user-form__input.popup-input {
-  padding-top: 15px;
+  padding-top: 8px;
   margin-bottom: 25px;
   font-size: 18px;
   max-width: 160px;
