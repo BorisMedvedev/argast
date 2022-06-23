@@ -4668,7 +4668,7 @@ input#password-input2::placeholder {
   -webkit-box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
           box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
   z-index: 999;
-  overflow: hidden;
+  overflow: auto;
 }
 
 @media (max-width: 560px) {
@@ -4982,6 +4982,7 @@ input#password-input2::placeholder {
 
 .popup-wrapper {
   width: 100%;
+  height: 90%;
   border: 1px solid rgba(209, 176, 133, 0.2);
   background-repeat: no-repeat;
   background-position: center;
@@ -5005,6 +5006,16 @@ input#password-input2::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.popup-content__item:last-child {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 510px) {
+  .popup-content__item:last-child {
+    padding-bottom: 260px;
+  }
 }
 
 .popup-content__box {
@@ -5043,13 +5054,19 @@ input#password-input2::placeholder {
           align-items: center;
 }
 
+@media (max-width: 560px) {
+  .popup-content__box-right {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+}
+
 .popup-content__btn {
   width: 315px;
   height: 30px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../images/hp-btn.png");
-  background-size: cover;
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
   -webkit-transition: -webkit-filter 0.3s;
@@ -5063,6 +5080,12 @@ input#password-input2::placeholder {
           filter: brightness(150%);
 }
 
+@media (max-width: 560px) {
+  .popup-content__btn {
+    width: 150px;
+  }
+}
+
 .popup-content__btn--bg {
   margin-top: 5px;
   background-image: url("../images/rage.png");
@@ -5070,6 +5093,12 @@ input#password-input2::placeholder {
 
 .popup-content__box-img {
   margin-bottom: 5px;
+}
+
+@media (max-width: 560px) {
+  .popup-content__box-img {
+    display: none;
+  }
 }
 
 .popup-wrapper {
@@ -5115,6 +5144,10 @@ input#password-input2::placeholder {
   z-index: 99;
 }
 
+.price-box__btn-bottom::after {
+  display: none;
+}
+
 .price-box__num-left {
   padding: 0 5px;
   margin-right: 8px;
@@ -5131,14 +5164,44 @@ input#password-input2::placeholder {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 560px) {
+  .price-box__num-right {
+    width: 110px;
+  }
+}
+
+@media (max-width: 560px) {
+  .user-form__btn.price-box__btn-bottom {
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .user-form__btn.price-box__btn-bottom::after {
+    display: none;
+  }
+}
+
 .center-box {
   max-width: 375px;
   width: 100%;
   position: absolute;
-  bottom: 70px;
+  bottom: -4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 560px) {
+  .center-box {
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 510px) {
+  .center-box {
+    bottom: -7px;
+  }
 }
 
 .center-box__top {
@@ -5162,6 +5225,7 @@ input#password-input2::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .center-box__bottom-left {
@@ -5195,6 +5259,34 @@ input#password-input2::placeholder {
           box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.3);
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
+}
+
+@media (max-width: 1560px) {
+  .btn-popup-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1560px) {
+  .btn-popup-img img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-popup-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-popup-img img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* CONTENT */

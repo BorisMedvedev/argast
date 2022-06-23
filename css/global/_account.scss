@@ -2319,7 +2319,8 @@ input#password-input2 {
   border: 1px solid rgb(39, 30, 48);
   box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
   z-index: 999;
-  overflow: hidden;
+  overflow: auto;
+ 
   @include r(560) {
     width: 95%;
   }
@@ -2552,6 +2553,7 @@ input#password-input2 {
 
 .popup-wrapper {
   width: 100%;
+  height: 90%;
   border: 1px solid rgba(209, 176, 133, 0.2);
   background-repeat: no-repeat;
   background-position: center;
@@ -2567,6 +2569,12 @@ input#password-input2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &:last-child {
+      padding-bottom: 40px;
+      @include r (510){
+        padding-bottom: 260px;
+      }
+    }
   }
   &__box {
     display: flex;
@@ -2583,6 +2591,9 @@ input#password-input2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include r (560){
+      transform: translateY(12px);
+    }
   }
   &__btn {
     width: 315px;
@@ -2590,21 +2601,28 @@ input#password-input2 {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../images/hp-btn.png");
-    background-size: cover;
+    
     filter: brightness(90%);
     transition: filter 0.3s;
     &:hover {
       filter: brightness(150%);
+    }
+    @include r (560){
+      width: 150px;
     }
   }
 
   &__btn--bg {
     margin-top: 5px;
     background-image: url("../images/rage.png");
+    
   }
 
   &__box-img {
     margin-bottom: 5px;
+    @include r (560){
+      display: none;
+    }
   }
 }
 
@@ -2638,6 +2656,11 @@ input#password-input2 {
     }
   }
 
+  &__btn-bottom::after{
+    display: none;
+
+  }
+
   &__num-left {
     padding: 0 5px;
     margin-right: 8px;
@@ -2651,16 +2674,34 @@ input#password-input2 {
     font-family: "BeaufortforLOL-Bold", sans-serif;
     color: #fd9b38;
     background-color: rgba(255, 255, 255, 0.1);
+    @include r (560){
+      width: 110px;
+    }
   }
 }
-
+.user-form__btn.price-box__btn-bottom{
+  @include r (560){
+    padding: 0;
+  }
+}
+.user-form__btn.price-box__btn-bottom::after{
+  @include r (560){
+    display: none;
+  }
+}
 .center-box {
   max-width: 375px;
   width: 100%;
   position: absolute;
-  bottom: 70px;
+  bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
+  @include r(560){
+        max-width: 290px;
+  }
+  @include r(510){
+        bottom: -7px;
+  }
 
   &__top {
     max-width: 210px;
@@ -2674,10 +2715,11 @@ input#password-input2 {
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     font-size: 16px;
-
     padding: 5px;
     border: 1px solid #726351;
     display: flex;
+    margin-bottom: 15px;
+    
   }
 
   &__bottom-left {
@@ -2704,5 +2746,28 @@ input#password-input2 {
   &:hover {
     box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.3);
     filter: brightness(150%);
+  }
+
+  @include r (1560){
+    width: 50px;
+    height: 50px;
+  }
+
+  img{
+    @include r (1560){
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @include r (768){
+    width: 40px;
+    height: 40px;
+  }
+
+  img{
+    @include r (768){
+      width: 40px;
+      height: 40px;
+    }
   }
 }
