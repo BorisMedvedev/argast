@@ -1117,22 +1117,6 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  // background: url("../images/svg/view.svg") 0 0 no-repeat;
-  // filter: invert(39%) sepia(9%) saturate(204%) hue-rotate(343deg) brightness(96%) contrast(86%);
-}
-
-// .password-control--bottom{
-//   right: -280px;
-//   @include r(1340) {
-// 		right: -152px;
-// 	}
-//   @include r(968) {
-// 		right: -107px;
-// 	}
-// }
-
-.password-control.view {
-  // background: url("../images/svg/no-view.svg") 0 0 no-repeat;
 }
 
 .user-form__btn {
@@ -2320,7 +2304,7 @@ input#password-input2 {
   box-shadow: -2px 3px 19px 4px rgba(189, 130, 179, 0.1);
   z-index: 999;
   overflow: auto;
- 
+
   @include r(560) {
     width: 95%;
   }
@@ -2370,7 +2354,7 @@ input#password-input2 {
     margin-top: 50px;
   }
 
-  .popup__descr-buy span{
+  .popup__descr-buy span {
     color: #fd9b38;
   }
 }
@@ -2390,7 +2374,7 @@ input#password-input2 {
   .popup-input {
     padding: 8px 30px;
     &::placeholder {
-      font-family: 'XO_Oriel_Nu', sans-serif;
+      font-family: "XO_Oriel_Nu", sans-serif;
       color: #696562;
     }
   }
@@ -2402,7 +2386,7 @@ input#password-input2 {
     margin-top: 50px;
   }
 
-  .popup__descr-buy span{
+  .popup__descr-buy span {
     color: #fd9b38;
   }
 }
@@ -2612,7 +2596,7 @@ input#password-input2 {
     justify-content: space-between;
     &:last-child {
       padding-bottom: 40px;
-      @include r (510){
+      @include r(510) {
         padding-bottom: 260px;
       }
     }
@@ -2632,7 +2616,7 @@ input#password-input2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include r (560){
+    @include r(560) {
       transform: translateY(12px);
     }
   }
@@ -2642,13 +2626,13 @@ input#password-input2 {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../images/hp-btn.png");
-    
+
     filter: brightness(90%);
     transition: filter 0.3s;
     &:hover {
       filter: brightness(150%);
     }
-    @include r (560){
+    @include r(560) {
       width: 150px;
     }
   }
@@ -2656,12 +2640,11 @@ input#password-input2 {
   &__btn--bg {
     margin-top: 5px;
     background-image: url("../images/rage.png");
-    
   }
 
   &__box-img {
     margin-bottom: 5px;
-    @include r (560){
+    @include r(560) {
       display: none;
     }
   }
@@ -2697,9 +2680,8 @@ input#password-input2 {
     }
   }
 
-  &__btn-bottom::after{
+  &__btn-bottom::after {
     display: none;
-
   }
 
   &__num-left {
@@ -2715,18 +2697,18 @@ input#password-input2 {
     font-family: "BeaufortforLOL-Bold", sans-serif;
     color: #fd9b38;
     background-color: rgba(255, 255, 255, 0.1);
-    @include r (560){
+    @include r(560) {
       width: 110px;
     }
   }
 }
-.user-form__btn.price-box__btn-bottom{
-  @include r (560){
+.user-form__btn.price-box__btn-bottom {
+  @include r(560) {
     padding: 0;
   }
 }
-.user-form__btn.price-box__btn-bottom::after{
-  @include r (560){
+.user-form__btn.price-box__btn-bottom::after {
+  @include r(560) {
     display: none;
   }
 }
@@ -2737,11 +2719,11 @@ input#password-input2 {
   bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-  @include r(560){
-        max-width: 290px;
+  @include r(560) {
+    max-width: 290px;
   }
-  @include r(510){
-        bottom: -7px;
+  @include r(510) {
+    bottom: -7px;
   }
 
   &__top {
@@ -2760,7 +2742,6 @@ input#password-input2 {
     border: 1px solid #726351;
     display: flex;
     margin-bottom: 15px;
-    
   }
 
   &__bottom-left {
@@ -2789,24 +2770,24 @@ input#password-input2 {
     filter: brightness(150%);
   }
 
-  @include r (1560){
+  @include r(1560) {
     width: 50px;
     height: 50px;
   }
 
-  img{
-    @include r (1560){
+  img {
+    @include r(1560) {
       width: 50px;
       height: 50px;
     }
   }
-  @include r (768){
+  @include r(768) {
     width: 40px;
     height: 40px;
   }
 
-  img{
-    @include r (768){
+  img {
+    @include r(768) {
       width: 40px;
       height: 40px;
     }
